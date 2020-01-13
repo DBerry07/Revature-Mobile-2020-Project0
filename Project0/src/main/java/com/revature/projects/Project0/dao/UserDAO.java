@@ -1,4 +1,4 @@
-package com.revature.projects.Project0.doa;
+package com.revature.projects.Project0.dao;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class UserDOA{
+public class UserDAO{
 	
 	public void writeObject(Object obj) {
 		String fileName = "users.dat";
@@ -24,9 +24,10 @@ public class UserDOA{
 		}
 	}
 
-	public Object readObject(String fileName) {
+	public Object readUsers() {
+		String filename = "users.dat";
 		Object obj = null;
-		try (FileInputStream fis = new FileInputStream(fileName);
+		try (FileInputStream fis = new FileInputStream(filename);
 				ObjectInputStream ois = new ObjectInputStream(fis)) {
 			obj = ois.readObject();
 		}

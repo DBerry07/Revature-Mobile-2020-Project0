@@ -3,44 +3,64 @@ package com.revature.projects.Project0.pojo;
 import java.awt.List;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 @SuppressWarnings("serial")
 public class Car implements Serializable {
 
 	private String make;
-	private int model;
+	private String model;
+	private int year;
 	private String colour;
-	private ArrayList<Double> bids;
-	private double soldValue;
-	private User soldTo;
+	private int price;
+	private Map<User, Integer> offers;
 	
 	public Car() {} //No args constructor
 	
-	public Car(String make, int model, String colour) {
+	public Car(String make, String model, int year, String colour, int price) {
 		this.make = make;
 		this.model = model;
+		this.year = year;
 		this.colour = colour;
-		this.bids = new ArrayList<Double>();
+		this.offers = new HashMap<User, Integer>();
+		this.price = price;
 	}
 	
 	public String getMake() {
 		return this.make;
 	}
-	public int getModel() {
+	public String getModel() {
 		return this.model;
 	}
-	public ArrayList<Double> getBids() {
-		return this.bids;
+	public int getYear() {
+		return this.year;
+	}
+	public int getPrice() {
+		return this.price;
+	}
+	public Map<User, Integer> getBids() {
+		return this.offers;
 	}
 	
 	public void setMake(String make) {
 		this.make = make;
 	}
-	public void setModel(int model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
-	public void addBid(double bid) {
-		this.bids.add(bid);
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public void addOffer(User user, int offer) {
+		offers.put(user, offer);
+	}
+	
+	@Override
+	public String toString(){
+		String str = this.year + " " + this.colour + " " + this.make + " " + this.model + ": $" + this.price;
+		return str;
 	}
 	
 }
