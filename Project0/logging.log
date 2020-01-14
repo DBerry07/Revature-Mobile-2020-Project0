@@ -1,164 +1,26 @@
-2020-01-14 14:39:00 DEBUG Driver:36 - ==USERS==
-2020-01-14 14:39:00 DEBUG Driver:37 - [admin, user]
-2020-01-14 14:39:00 DEBUG Driver:39 - admin true pass
-2020-01-14 14:39:00 DEBUG Driver:39 - user false pass
-2020-01-14 14:39:00 DEBUG Driver:41 - ==LOT CARS==
-2020-01-14 14:39:00 DEBUG Driver:43 - 2005 grey toyota matrix 8000
-2020-01-14 14:39:00 DEBUG Driver:45 - Owner: null, Payment: 0
-2020-01-14 14:39:00 DEBUG Driver:43 - 2011 yellow honda fit 18000
-2020-01-14 14:39:00 DEBUG Driver:45 - Owner: null, Payment: 0
-2020-01-14 14:39:00 DEBUG Driver:47 - ==BOUGHT CARS==
-2020-01-14 14:39:00 DEBUG Driver:49 - 333 444 111 222 555
-2020-01-14 14:39:00 DEBUG Driver:51 - Owner: user, Payment: 660
-2020-01-14 14:41:15 DEBUG Driver:37 - ==USERS==
-2020-01-14 14:41:15 DEBUG Driver:38 - [admin, user]
-2020-01-14 14:41:15 DEBUG Driver:40 - admin true pass
-2020-01-14 14:41:15 DEBUG Driver:40 - user false pass
-2020-01-14 14:41:15 DEBUG Driver:42 - ==LOT CARS==
-2020-01-14 14:41:15 DEBUG Driver:44 - 2005 grey toyota matrix 8000
-2020-01-14 14:41:15 DEBUG Driver:46 - Owner: null, Payment: 0
-2020-01-14 14:41:15 DEBUG Driver:44 - 2011 yellow honda fit 18000
-2020-01-14 14:41:15 DEBUG Driver:46 - Owner: null, Payment: 0
-2020-01-14 14:41:15 DEBUG Driver:48 - ==BOUGHT CARS==
-2020-01-14 14:41:15 DEBUG Driver:50 - 333 444 111 222 555
-2020-01-14 14:41:15 DEBUG Driver:52 - Owner: user, Payment: 660
-2020-01-14 14:42:10 DEBUG Driver:37 - ==USERS==
-2020-01-14 14:42:10 DEBUG Driver:38 - [admin, user]
-2020-01-14 14:42:10 DEBUG Driver:40 - admin true pass
-2020-01-14 14:42:10 DEBUG Driver:40 - user false pass
-2020-01-14 14:42:10 DEBUG Driver:42 - ==LOT CARS==
-2020-01-14 14:42:10 DEBUG Driver:44 - 2005 grey toyota matrix 8000
-2020-01-14 14:42:10 DEBUG Driver:46 - Owner: null, Payment: 0
-2020-01-14 14:42:10 DEBUG Driver:44 - 2011 yellow honda fit 18000
-2020-01-14 14:42:10 DEBUG Driver:46 - Owner: null, Payment: 0
-2020-01-14 14:42:10 DEBUG Driver:48 - ==BOUGHT CARS==
-2020-01-14 14:42:10 DEBUG Driver:50 - 333 444 111 222 555
-2020-01-14 14:42:10 DEBUG Driver:52 - Owner: user, Payment: 660
-2020-01-14 15:05:38 DEBUG Driver:41 - ==USERS==
-2020-01-14 15:05:38 DEBUG Driver:42 - [admin, user]
-2020-01-14 15:05:38 DEBUG Driver:44 - admin true pass
-2020-01-14 15:05:38 DEBUG Driver:44 - user false pass
-2020-01-14 15:05:38 DEBUG Driver:46 - ==LOT CARS==
-2020-01-14 15:05:38 DEBUG Driver:48 - 2005 grey toyota matrix 8000
-2020-01-14 15:05:38 DEBUG Driver:50 - Owner: null, Payment: 0
-2020-01-14 15:05:38 DEBUG Driver:48 - 2011 yellow honda fit 18000
-2020-01-14 15:05:38 DEBUG Driver:50 - Owner: null, Payment: 0
-2020-01-14 15:05:38 DEBUG Driver:52 - ==BOUGHT CARS==
-2020-01-14 15:05:38 DEBUG Driver:54 - 333 444 111 222 555
-2020-01-14 15:05:38 DEBUG Driver:56 - Owner: user, Payment: 660
-2020-01-14 15:14:51 DEBUG Driver:90 - ==USERS==
-2020-01-14 15:14:51 DEBUG Driver:91 - [admin, user]
-2020-01-14 15:14:51 DEBUG Driver:93 - admin true pass
-2020-01-14 15:14:51 DEBUG Driver:93 - user false pass
-2020-01-14 15:14:51 DEBUG Driver:97 - ==LOT CARS==
-2020-01-14 15:14:51 DEBUG Driver:99 - 2005 grey toyota matrix 8000
-2020-01-14 15:14:51 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:14:51 DEBUG Driver:99 - 2011 yellow honda fit 18000
-2020-01-14 15:14:51 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:14:51 DEBUG Driver:105 - ==BOUGHT CARS==
-2020-01-14 15:14:51 DEBUG Driver:107 - 333 444 111 222 555
-2020-01-14 15:14:51 DEBUG Driver:109 - Owner: user, Payment: 660
-2020-01-14 15:15:20 DEBUG Driver:105 - ==BOUGHT CARS==
-2020-01-14 15:15:20 DEBUG Driver:107 - 333 444 111 222 555
-2020-01-14 15:15:20 DEBUG Driver:109 - Owner: user, Payment: 590
-2020-01-14 15:15:36 DEBUG Driver:97 - ==LOT CARS==
-2020-01-14 15:15:36 DEBUG Driver:99 - 2005 grey toyota matrix 8000
-2020-01-14 15:15:36 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:15:36 DEBUG Driver:99 - 2011 yellow honda fit 18000
-2020-01-14 15:15:36 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:16:49 DEBUG Driver:97 - ==LOT CARS==
-2020-01-14 15:16:49 DEBUG Driver:99 - 2005 grey toyota matrix 8000
-2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:16:49 DEBUG Driver:99 - 2011 yellow honda fit 18000
-2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:16:49 DEBUG Driver:99 - 2001 silver ford t150 11000
-2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:17:33 DEBUG Driver:97 - ==LOT CARS==
-2020-01-14 15:17:33 DEBUG Driver:99 - 2005 grey toyota matrix 8000
-2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:17:33 DEBUG Driver:99 - 2011 yellow honda fit 18000
-2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:17:33 DEBUG Driver:99 - 2001 silver ford t150 11000
-2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:18:19 DEBUG Driver:97 - ==LOT CARS==
-2020-01-14 15:18:19 DEBUG Driver:99 - 2011 yellow honda fit 18000
-2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:18:19 DEBUG Driver:99 - 2001 silver ford t150 11000
-2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0
-2020-01-14 15:28:39 DEBUG Driver:17 - ==USERS==
-2020-01-14 15:28:39 DEBUG Driver:18 - [admin, user]
-2020-01-14 15:28:39 DEBUG Driver:20 - admin true pass
-2020-01-14 15:28:39 DEBUG Driver:20 - user false pass
-2020-01-14 15:28:39 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:28:39 DEBUG Driver:26 - 2011 yellow honda fit 18000
-2020-01-14 15:28:39 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:28:39 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:28:39 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:28:39 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:28:39 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:28:39 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:30:14 DEBUG Driver:17 - ==USERS==
-2020-01-14 15:30:14 DEBUG Driver:18 - [admin, user, david]
-2020-01-14 15:30:14 DEBUG Driver:20 - admin true pass
-2020-01-14 15:30:14 DEBUG Driver:20 - user false pass
-2020-01-14 15:30:14 DEBUG Driver:20 - david false pass
-2020-01-14 15:30:14 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:30:14 DEBUG Driver:26 - 2011 yellow honda fit 18000
-2020-01-14 15:30:14 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:14 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:30:14 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:14 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:30:14 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:30:14 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:30:30 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:30:30 DEBUG Driver:26 - 2011 yellow honda fit 18000
-2020-01-14 15:30:30 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:30 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:30:30 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:39 DEBUG Driver:17 - ==USERS==
-2020-01-14 15:30:39 DEBUG Driver:18 - [admin, user, david]
-2020-01-14 15:30:39 DEBUG Driver:20 - admin true pass
-2020-01-14 15:30:39 DEBUG Driver:20 - user false pass
-2020-01-14 15:30:39 DEBUG Driver:20 - david false pass
-2020-01-14 15:30:39 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:30:39 DEBUG Driver:26 - 2011 yellow honda fit 18000
-2020-01-14 15:30:39 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:39 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:30:39 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:30:39 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:30:39 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:30:39 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:31:01 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:31:01 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:31:01 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:31:01 DEBUG Driver:34 - 2011 yellow honda fit 18000
-2020-01-14 15:31:01 DEBUG Driver:36 - Owner: david, Payment: 17999
-2020-01-14 15:31:01 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:31:01 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:31:01 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:31:43 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:31:43 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:31:43 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:31:43 DEBUG Driver:34 - 2011 yellow honda fit 18000
-2020-01-14 15:31:43 DEBUG Driver:36 - Owner: david, Payment: 17000
-2020-01-14 15:32:07 DEBUG Driver:17 - ==USERS==
-2020-01-14 15:32:07 DEBUG Driver:18 - [admin, user, david]
-2020-01-14 15:32:07 DEBUG Driver:20 - admin true pass
-2020-01-14 15:32:07 DEBUG Driver:20 - user false pass
-2020-01-14 15:32:07 DEBUG Driver:20 - david false pass
-2020-01-14 15:32:07 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:32:07 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:32:07 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:32:07 DEBUG Driver:32 - ==BOUGHT CARS==
-2020-01-14 15:32:07 DEBUG Driver:34 - 333 444 111 222 555
-2020-01-14 15:32:07 DEBUG Driver:36 - Owner: user, Payment: 590
-2020-01-14 15:32:07 DEBUG Driver:34 - 2011 yellow honda fit 18000
-2020-01-14 15:32:07 DEBUG Driver:36 - Owner: david, Payment: 17000
-2020-01-14 15:33:12 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:33:12 DEBUG Driver:26 - 2001 silver ford t150 11000
-2020-01-14 15:33:12 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:33:12 DEBUG Driver:26 - 2066 black toyota corolla 35000
-2020-01-14 15:33:12 DEBUG Driver:28 - Owner: null, Payment: 0
-2020-01-14 15:33:31 DEBUG Driver:24 - ==LOT CARS==
-2020-01-14 15:33:31 DEBUG Driver:26 - 2066 black toyota corolla 35000
-2020-01-14 15:33:31 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 16:09:50 DEBUG Driver:16 - ==USERS==
+2020-01-14 16:09:50 DEBUG Driver:17 - [admin, user, david]
+2020-01-14 16:09:50 DEBUG Driver:19 - admin true pass
+2020-01-14 16:09:50 DEBUG Driver:19 - user false pass
+2020-01-14 16:09:50 DEBUG Driver:19 - david false pass
+2020-01-14 16:09:50 DEBUG Driver:23 - ==LOT CARS==
+2020-01-14 16:09:50 DEBUG Driver:25 - 2066 black toyota corolla 35000
+2020-01-14 16:09:50 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-14 16:09:50 DEBUG Driver:31 - ==BOUGHT CARS==
+2020-01-14 16:09:50 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-14 16:09:50 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-14 16:09:50 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-14 16:09:50 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-14 16:10:58 DEBUG Driver:16 - ................USERS.................
+2020-01-14 16:10:58 DEBUG Driver:17 - [admin, user, david]
+2020-01-14 16:10:58 DEBUG Driver:19 - admin true pass
+2020-01-14 16:10:58 DEBUG Driver:19 - user false pass
+2020-01-14 16:10:58 DEBUG Driver:19 - david false pass
+2020-01-14 16:10:58 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-14 16:10:58 DEBUG Driver:25 - 2066 black toyota corolla 35000
+2020-01-14 16:10:58 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-14 16:10:58 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-14 16:10:58 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-14 16:10:58 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-14 16:10:58 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-14 16:10:58 DEBUG Driver:35 - Owner: david, Payment: 17000

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import com.revature.projects.Project0.dao.BoughtDAO;
@@ -156,8 +155,15 @@ public class Driver {
 
 		while (true) {
 			Car car = null;
+			int select = -1;
 			System.out.println("Select car payment: ");
-			int select = Integer.parseInt(scan.nextLine());
+			try {
+				select = Integer.parseInt(scan.nextLine());
+			}
+			catch (NumberFormatException e) {
+				System.out.println("Invalid selection");
+				continue;
+			}
 			int payoff = 0;
 			if (select == 0) {
 				return;
@@ -303,7 +309,11 @@ public class Driver {
 			int i = 1;
 			System.out.println("Enter the number of the desired car: ");
 			carIndex = Integer.parseInt(scan.nextLine());
-			if (carIndex == 0) {
+			if (carIndex <= 0) {
+				return;
+			}
+			if (carIndex >= cars.size()) {
+				System.out.println("Invalid selection.");
 				return;
 			}
 			Car car = cars.get(carIndex - 1);
@@ -468,7 +478,11 @@ public class Driver {
 				System.out.println("Invalid selection.");
 				continue;
 			}
-			if (select == 0) {
+			if (select <= 0) {
+				return;
+			}
+			else if (select >= cars.size()) {
+				System.out.println("Invalid selection");
 				return;
 			}
 			Car car = cars.get(select - 1);
