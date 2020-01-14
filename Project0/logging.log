@@ -24,3 +24,33 @@
 2020-01-14 16:10:58 DEBUG Driver:35 - Owner: user, Payment: 590
 2020-01-14 16:10:58 DEBUG Driver:33 - 2011 yellow honda fit 18000
 2020-01-14 16:10:58 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-14 16:18:38 DEBUG Driver:16 - ................USERS.................
+2020-01-14 16:18:38 DEBUG Driver:17 - [admin, user, david]
+2020-01-14 16:18:38 DEBUG Driver:19 - admin true pass
+2020-01-14 16:18:38 DEBUG Driver:19 - user false pass
+2020-01-14 16:18:38 DEBUG Driver:19 - david false pass
+2020-01-14 16:18:38 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-14 16:18:38 DEBUG Driver:25 - 2066 black toyota corolla 35000
+2020-01-14 16:18:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-14 16:18:38 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-14 16:18:38 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-14 16:18:38 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-14 16:18:38 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-14 16:18:38 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-14 16:20:43 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-14 16:21:02 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-14 16:21:02 DEBUG Driver:25 - 2006 grey toyora matrix 2000
+2020-01-14 16:21:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-14 16:22:38 DEBUG Driver:16 - ................USERS.................
+2020-01-14 16:22:38 DEBUG Driver:17 - [admin, user, david]
+2020-01-14 16:22:38 DEBUG Driver:19 - admin true pass
+2020-01-14 16:22:38 DEBUG Driver:19 - user false pass
+2020-01-14 16:22:38 DEBUG Driver:19 - david false pass
+2020-01-14 16:22:38 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-14 16:22:38 DEBUG Driver:25 - 2006 grey toyora matrix 2000
+2020-01-14 16:22:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-14 16:22:38 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-14 16:22:38 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-14 16:22:38 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-14 16:22:38 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-14 16:22:38 DEBUG Driver:35 - Owner: david, Payment: 17000

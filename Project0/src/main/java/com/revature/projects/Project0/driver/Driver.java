@@ -312,7 +312,7 @@ public class Driver {
 			if (carIndex <= 0) {
 				return;
 			}
-			if (carIndex >= cars.size()) {
+			if (carIndex > cars.size()) {
 				System.out.println("Invalid selection.");
 				return;
 			}
@@ -481,7 +481,7 @@ public class Driver {
 			if (select <= 0) {
 				return;
 			}
-			else if (select >= cars.size()) {
+			else if (select > cars.size()) {
 				System.out.println("Invalid selection");
 				return;
 			}
