@@ -12,6 +12,9 @@ public class UserLoginService {
 
 	public static boolean checkUser(String username, String password) {
 		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		if (users == null) {
+			return false;
+		}
 		for (User each : users) {
 			if (each.getUsername().equals(username)) {
 				if (each.getPassword().equals(password)) {
@@ -24,6 +27,9 @@ public class UserLoginService {
 	
 	public static boolean checkAdmin(String username, String password) {
 		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		if (users == null) {
+			return false;
+		}
 		for (User each : users) {
 			if (each.getUsername().equals(username) && each.getPassword().equals(password)) {
 				if (each.getAdmin() == true) {

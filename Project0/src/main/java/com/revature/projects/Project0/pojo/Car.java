@@ -15,7 +15,9 @@ public class Car implements Serializable {
 	private int year;
 	private String colour;
 	private int price;
-	private Map<User, Integer> offers;
+	private Map<String, Integer> offers;
+	private String owner;
+	private int payLeft;
 	
 	public Car() {} //No args constructor
 	
@@ -24,8 +26,9 @@ public class Car implements Serializable {
 		this.model = model;
 		this.year = year;
 		this.colour = colour;
-		this.offers = new HashMap<User, Integer>();
+		this.offers = new HashMap<String, Integer>();
 		this.price = price;
+		this.owner = null;
 	}
 	
 	public String getMake() {
@@ -40,8 +43,27 @@ public class Car implements Serializable {
 	public int getPrice() {
 		return this.price;
 	}
-	public Map<User, Integer> getBids() {
-		return this.offers;
+	public String getColour() {
+		return this.colour;
+	}
+	public int getPayment() {
+		return this.payLeft;
+	}
+	public Map<String, Integer> getOffers() {
+		if (this.owner == null) {
+			return this.offers;
+		}
+		else {
+			return null;
+		}
+	}
+	
+	public String getOwner() {
+		return this.owner;
+	}
+	public void setOwner(String owner, int offerPrice) {
+		this.owner = owner;
+		this.payLeft = offerPrice;
 	}
 	
 	public void setMake(String make) {
@@ -53,7 +75,10 @@ public class Car implements Serializable {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public void addOffer(User user, int offer) {
+	public void setPayment(int payment) {
+		this.payLeft = payment;
+	}
+	public void addOffer(String user, int offer) {
 		offers.put(user, offer);
 	}
 	

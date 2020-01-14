@@ -27,7 +27,7 @@ public class Test {
 	@org.junit.Test
 	public void testUserDAO() {
 		Object file = null;
-		file = uDAO.readObject(userFile);
+		file = uDAO.readUsers();
 		assertNotNull(file);
 	}
 	

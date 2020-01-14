@@ -8,7 +8,6 @@ public class User implements Serializable{
 	
 	private String username;
 	private String password;
-	private ArrayList<Car> carsBought;
 	private boolean admin = false;
 	
 	public User() {} //No args constructor
@@ -28,8 +27,19 @@ public class User implements Serializable{
 	public boolean getAdmin() {
 		return this.admin;
 	}
-	public ArrayList<Car> getCars(){
-		return this.carsBought;
+	public ArrayList<Car> getCars(ArrayList<Car> bought){
+		ArrayList<Car> arr = new ArrayList<Car>();
+		for (Car car : bought) {
+			if (car.getOwner().equals(this)) {
+				arr.add(car);
+			}
+		}
+		return arr;
+	}
+	
+	@Override
+	public String toString() {
+		return username;
 	}
 
 }

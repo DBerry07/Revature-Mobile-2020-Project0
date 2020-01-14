@@ -3,6 +3,7 @@ package com.revature.projects.Project0.driver;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.revature.projects.Project0.dao.*;
 import com.revature.projects.Project0.pojo.*;
@@ -15,10 +16,25 @@ public class Driver {
 	public static CarDAO cDAO = new CarDAO();
 	public static UserDAO uDAO = new UserDAO();
 	public static User usingUser;
+	public static ArrayList<User> users;
+	public static ArrayList<Car> cars;
+	public static ArrayList<Car> bought;
 
 	public static void main(String[] args) {
 		String option = "";
-		int selection = 0;
+		int selection = -1;
+		users = (ArrayList<User>) uDAO.readUsers();
+		cars = (ArrayList<Car>) cDAO.readCars();
+		bought = (ArrayList<Car>) cDAO.readBoughtCars();
+		if (users == null) {
+			users = new ArrayList<User>();
+		}
+		if (cars == null) {
+			cars = new ArrayList<Car>();
+		}
+		if (bought == null) {
+			bought = new ArrayList<Car>();
+		}
 
 		do {
 			System.out.println("\nWelcome to Car World!");
@@ -26,84 +42,62 @@ public class Driver {
 			System.out.println("[1] Log In");
 			System.out.println("[2] Log In as Admin");
 			System.out.println("[3] Create new User Account");
-			System.out.println("[9] Exit\n");
+			System.out.println("[0] Exit");
 			option = scan.nextLine();
 
 			try {
 				selection = Integer.parseInt(option);
-			} catch (Exception e) {
-				e.printStackTrace();
-				System.out.println("\nNot an option.");
+			} catch (NumberFormatException e) {
+				System.out.println("NOT A VALID OPTION");
 			}
 
 			if (selection == 1) {
-				System.out.println("Enter username: ");
-				String username = scan.nextLine();
-				System.out.println("Enter Password: ");
-				String password = scan.nextLine();
-				boolean check = UserLoginService.checkUser(username, password);
-				if (check == false) {
-					System.out.println("\nInvalid Credentials");
-					continue;
-				} else if (check == true) {
-					System.out.println("\nCredentials Accepted!");
-					usingUser = UserLoginService.getUser(username, password);
-					userLogin();
-					continue;
-				}
+				userLogin();
 			}
 
 			if (selection == 2) {
-				System.out.println("Enter username: ");
-				String username = scan.nextLine();
-				System.out.println("Enter Password: ");
-				String password = scan.nextLine();
-				boolean check = UserLoginService.checkAdmin(username, password);
-				if (check == false) {
-					System.out.println("\nInvalid Credentials");
-					continue;
-				} else if (check == true) {
-					System.out.println("\nCredentials Accepted!");
-					adminLogin();
-					continue;
-				}
+				adminLogin();
 			}
 
 			else if (selection == 3) {
-				boolean admin = false;
-				System.out.println("Enter the desired username: ");
-				String username = scan.nextLine();
-				System.out.println("Enter the desired password: ");
-				String password = scan.nextLine();
-				System.out.println("Make this an admin account? (y/n)");
-				String question = scan.nextLine();
-
-				if (question.toUpperCase().charAt(0) == 'Y') {
-					admin = true;
-				}
-
-				boolean res = UserLoginService.createUser(username, password, admin);
-				if (res == true) {
-					System.out.println("Success! New user '" + username + "' has been created!");
-				} else {
-					System.out.println("Failure! Invalid username!");
-				}
+				makeNewUser();
 			}
 
-		} while (selection != 9);
+		} while (selection != 0);
 
 		System.out.println("Exiting...");
 
 	}
 
 	public static void userLogin() {
-		int selection = 0;
+		System.out.println("Enter username: ");
+		String username = scan.nextLine();
+		System.out.println("Enter Password: ");
+		String password = scan.nextLine();
+		boolean check = UserLoginService.checkUser(username, password);
+		if (check == false) {
+			System.out.println("\nInvalid Credentials");
+			return;
+		} else if (check == true) {
+			System.out.println("\nCredentials Accepted!");
+			for (User user : users) {
+				if (user.getUsername().equals(username)) {
+					usingUser = user;
+				}
+			}
+			userMenu();
+			return;
+		}
+	}
+
+	public static void userMenu() {
+		int selection = -1;
 		do {
 
 			System.out.println("\n[1] View Lot");
 			System.out.println("[2] View Bought Cars");
 			System.out.println("[3] Make an Offer on a Car");
-			System.out.println("[9] Return to Menu");
+			System.out.println("[0] Return to Menu");
 			try {
 				selection = Integer.parseInt(scan.nextLine());
 			} catch (Exception e) {
@@ -111,74 +105,94 @@ public class Driver {
 			}
 
 			if (selection == 1) {
-				ArrayList<Car> cars = null;
-				try {
-					cars = (ArrayList<Car>) cDAO.readCars();
-					int i = 1;
-					for (Car car : cars) {
-						System.out.println("[" + i + "] " + car);
-						i++;
-					}
-				}
-				catch (NullPointerException e) {
-					System.out.println("No cars in lot!");
-				}
-				
-				
+				viewCarLot();
+
 			} else if (selection == 2) {
-				int i = 1;
-				try {
-					for (Car carBought : usingUser.getCars()) {
-						System.out.println("[" + i + "]" + " " + carBought);
-					}
-				}
-				catch (NullPointerException e){
-					System.out.println("You haven't bought any cars!");
-				}
+				viewBoughtCars();
+
 			} else if (selection == 3) {
-				int carIndex = -1;
-				int offer = 0;
-				System.out.println("Enter the number of the desired car:");
-				try {
-					carIndex = Integer.parseInt(scan.nextLine());
-				}
-				catch (Exception e) {
-					System.out.println("Invalid selection");
-					continue;
-				}
-				ArrayList<Car> cars = (ArrayList<Car>) cDAO.readCars();
-				Car car = cars.get(carIndex);
-				System.out.println(car);
-				System.out.println("Is this the car you want? (y/n)");
-				String option = scan.nextLine();
-				if (option.toUpperCase().charAt(0) == 'Y') {
-					System.out.println("What is your offer? Enter only digits");
-					try {
-						offer = Integer.parseInt(scan.nextLine());
-					}
-					catch (Exception e) {
-						System.out.println("Invalid offer");
-						continue;
-					}
-					int difference = offer - car.getPrice();
-					System.out.println("The difference between the MSRP and your offer price is " + difference);
-					System.out.println("Is this acceptable?");
-					option = scan.nextLine();
-					if (option.toUpperCase().charAt(0) == 'Y') {
-						car.addOffer(usingUser, offer);
-						System.out.println("Your offer has been logged.");
-					}
-					else {
-						continue;
-					}
-				}
+				makeOffer();
 			}
 
-		} while (selection != 9);
+		} while (selection != 0);
+	}
+
+	public static void viewBoughtCars() {
+		int i = 1;
+		ArrayList<Car> userBought = new ArrayList<Car>();
+		for (Car each : bought) {
+			if (each.getOwner().equals(usingUser.getUsername())) {
+				userBought.add(each);
+			}
+		}
+		System.out.println("\n");
+		if (userBought.isEmpty()) {
+			System.out.println("You haven't bought any cars!");
+			return;
+		}
+		for (Car car : userBought) {
+			System.out.println("[" + i + "]" + " " + car.getYear() + " " + car.getColour() + " " + car.getMake() + " "
+					+ car.getModel() + " : " + car.getPayment());
+			i++;
+		}
+
+		while (true) {
+			Car car = null;
+			System.out.println("Select car payment: ");
+			int select = Integer.parseInt(scan.nextLine());
+			int payoff = 0;
+			if (select == 0) {
+				return;
+			}
+			try {
+				car = userBought.get(select - 1);
+			} catch (IndexOutOfBoundsException e) {
+				System.out.println("INVALID SELECTION");
+				continue;
+			}
+			System.out
+					.println("\n" + car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel());
+			System.out.println("Payment remaining: $" + car.getPayment());
+			System.out.println("Make a payment? (y/n)");
+			if (scan.nextLine().toUpperCase().charAt(0) == 'Y') {
+				System.out.println("Enter amount: ");
+				try {
+					payoff = Integer.parseInt(scan.nextLine());
+				} catch (NumberFormatException e) {
+					System.out.println("NOT A VALID NUMBER");
+					continue;
+				}
+				if (payoff > car.getPayment() || payoff <= 0) {
+					System.out.println("INVALID AMOUNT");
+					return;
+				}
+				car.setPayment(car.getPayment() - payoff);
+				cDAO.writeBought(bought);
+				System.out.println("Payment remaining: $" + car.getPayment());
+				return;
+			}
+			return;
+		}
 	}
 
 	public static void adminLogin() {
-		int selection = 0;
+		System.out.println("Enter username: ");
+		String username = scan.nextLine();
+		System.out.println("Enter Password: ");
+		String password = scan.nextLine();
+		boolean check = UserLoginService.checkAdmin(username, password);
+		if (check == false) {
+			System.out.println("\nInvalid Credentials");
+			return;
+		} else if (check == true) {
+			System.out.println("\nCredentials Accepted!");
+			adminMenu();
+			return;
+		}
+	}
+
+	public static void adminMenu() {
+		int selection = -1;
 		String option = "y";
 		do {
 			System.out.println("\nPlease make a selection: ");
@@ -187,7 +201,7 @@ public class Driver {
 			System.out.println("[3] Remove Car");
 			System.out.println("[4] View Offers");
 			System.out.println("[5] View Payments");
-			System.out.println("[9] Exit this Menu");
+			System.out.println("[0] Exit this Menu");
 
 			try {
 				selection = Integer.parseInt(scan.nextLine());
@@ -195,17 +209,7 @@ public class Driver {
 				System.out.println("\nInvalid option.");
 			}
 			if (selection == 1) {
-				ArrayList<Car> cars = (ArrayList<Car>) cDAO.readCars();
-
-				int i = 1;
-				try {
-					for (Car car : cars) {
-						System.out.println("[" + i + "] " + car);
-						i++;
-					}
-				} catch (Exception e) {
-					System.out.println("Car lot is empty!");
-				}
+				viewCarLot();
 				/*
 				 * System.out.println("\nEdit Car Listing? (y/n)"); option = scan.nextLine(); if
 				 * (option.toUpperCase().charAt(0) == 'Y') { int sel = 0; do {
@@ -227,103 +231,254 @@ public class Driver {
 			if (selection == 4) {
 				getOffersOnCar();
 			}
-			
+			if (selection == 5) {
+				getBoughtCars();
+			}
 
-		} while (selection != 9);
+		} while (selection != 0);
+	}
+
+	public static void makeNewUser() {
+		boolean admin = false;
+		System.out.println("Enter the desired username: ");
+		String username = scan.nextLine();
+		if (username.length() <= 3) {
+			System.out.println("INVALID USERNAME");
+			return;
+		}
+		System.out.println("Enter the desired password: ");
+		String password = scan.nextLine();
+		if (password.length() <= 3) {
+			System.out.println("INVALID USERNAME");
+			return;
+		}
+		System.out.println("Make this an admin account? (y/n)");
+		String question = scan.nextLine();
+		
+		if (question.length() < 1) {
+			System.out.println("INVALID SELECTION");
+			return;
+		}
+		if (question.toUpperCase().charAt(0) == 'Y') {
+			admin = true;
+		}
+
+		boolean res = UserLoginService.createUser(username, password, admin);
+		if (res == true) {
+			System.out.println("Success! New user '" + username + "' has been created!");
+		} else {
+			System.out.println("Failure! Invalid username!");
+		}
 	}
 
 	public static void getOffersOnCar() {
-		int carIndex, option = 0;
-		int i = 1;
-		System.out.println("Enter the number of the desired car: ");
-		carIndex = Integer.parseInt(scan.nextLine());
-		ArrayList<Car> cars = (ArrayList<Car>) cDAO.readCars();
-		Car car = cars.get(carIndex);
-		System.out.println("Offers: ");
-		for (User key : car.getBids().keySet()) {
-			System.out.println("[" + i + "] " + key.toString() + " : " + car.getBids().get(key) + " >> " + (car.getBids().get(key) - car.getPrice()));
-		}
-		System.out.println("Accept which offer?");
-		System.out.println("Enter -1 to exit this menu");
-		option = Integer.parseInt(scan.nextLine());
-		if (option == -1) {
-			return;
-		}
-		else {
-			//TODO write logic for accepting offer
+		ArrayList<String> userOffer = new ArrayList<String>();
+		int selectedOffer = 0;
+		while (true) {
+			if (cars.isEmpty()) {
+				System.out.println("No cars in lot");
+				return;
+			}
+			Set<String> keys = null;
+			int carIndex;
+			int i = 1;
+			System.out.println("Enter the number of the desired car: ");
+			carIndex = Integer.parseInt(scan.nextLine());
+			if (carIndex == 0) {
+				return;
+			}
+			Car car = cars.get(carIndex - 1);
+			System.out.println("\n" + car);
+			System.out.println("Offers: ");
+			try {
+				keys = car.getOffers().keySet();
+				for (String key : keys) {
+					System.out.println("[" + i + "] " + key + " : " + car.getOffers().get(key));
+					userOffer.add(key);
+					i++;
+				}
+			} catch (Exception e) {
+				System.out.println("No offers");
+				return;
+			}
+
+			while (true) {
+				System.out.println("Choose an offer: ");
+				selectedOffer = Integer.parseInt(scan.nextLine());
+				if (selectedOffer == 0) {
+					break;
+				} else {
+					System.out.println("What do you want to do with this offer?");
+					System.out.println("[1] Reject");
+					System.out.println("[2] Accept");
+					int sel = Integer.parseInt(scan.nextLine());
+					if (sel == 1) {
+						car.getOffers().remove(userOffer.get(selectedOffer - 1));
+						cDAO.writeCar(cars);
+						System.out.println("Offer rejected.");
+					} else if (sel == 2) {
+						car.setOwner(userOffer.get(selectedOffer - 1),
+								car.getOffers().get(userOffer.get(selectedOffer - 1)));
+						bought.add(car);
+						cDAO.writeBought(bought);
+						cars.remove(carIndex - 1);
+						cDAO.writeCar(cars);
+						System.out.println("Car sold.");
+						return;
+					}
+				}
+			}
 		}
 	}
-	
+
 	public static void addCar() {
-		String make, model, colour = null;
-		int price, year = 0;
-		System.out.println("Enter car make: ");
-		make = scan.nextLine();
-		System.out.println("Enter car model: ");
-		model = scan.nextLine();
-		System.out.println("Enter car year: ");
-		try {
-			year = Integer.parseInt(scan.nextLine());
-		} catch (Exception e) {
-			System.out.println("Invalid model year.");
-			return;
-		}
-		System.out.println("Enter car colour: ");
-		colour = scan.nextLine();
-		System.out.println("Enter price: ");
-		try {
-			price = Integer.parseInt(scan.nextLine());
-		}
-		catch (Exception e) {
-			System.out.println("Invalid price.");
-			return;
-		}
-		
-		System.out.println("\nMake: " + make);
-		System.out.println("Model: " + model);
-		System.out.println("Colour: " + colour);
-		System.out.println("Price: " + price);
-		System.out.println("Add this car? (y/n)");
-		String option = scan.nextLine();
-		if (option.toUpperCase().charAt(0) == 'Y') {
-			ArrayList<Car> cars = (ArrayList<Car>) cDAO.readCars();
-			if (cars != null) {
-				cars.add(new Car(make, model, year, colour, price));
+		while (true) {
+			String make, model, colour = null;
+			int price, year = 0;
+			System.out.println("Enter car make: ");
+			make = scan.nextLine();
+			if (make == "0") {
+				return;
 			}
-			else {
-				cars = new ArrayList<Car>();
-				cars.add(new Car(make, model, year, colour, price));
+			System.out.println("Enter car model: ");
+			model = scan.nextLine();
+			if (model == "0") {
+				return;
 			}
-			cDAO.writeObject(cars);
+			System.out.println("Enter car year: ");
+			try {
+				year = Integer.parseInt(scan.nextLine());
+			} catch (Exception e) {
+				System.out.println("Invalid model year.");
+				continue;
+			}
+			if (year == 0) {
+				return;
+			}
+			System.out.println("Enter car colour: ");
+			colour = scan.nextLine();
+			if (colour == "0") {
+				return;
+			}
+			System.out.println("Enter price: ");
+			try {
+				price = Integer.parseInt(scan.nextLine());
+			} catch (Exception e) {
+				System.out.println("Invalid price.");
+				return;
+			}
+			if (price == 0) {
+				return;
+			}
+
+			System.out.println("\nMake: " + make);
+			System.out.println("Model: " + model);
+			System.out.println("Colour: " + colour);
+			System.out.println("Price: " + price);
+			System.out.println("Add this car? (y/n)");
+			String option = scan.nextLine();
+			if (option.toUpperCase().charAt(0) == 'Y') {
+				cars.add(new Car(make, model, year, colour, price));
+				cDAO.writeCar(cars);
+				return;
+			}
 		}
-		return;
 	}
 
 	public static void removeCar() {
-		String input = null;
-		int index = -1;
+		int select = -1;
+		do {
+			String input = null;
 
-		System.out.println("Enter the number of the car you wish to remove from the lot:");
-		input = scan.nextLine();
-		try {
-			index = Integer.parseInt(input);
-		} catch (Exception e) {
-			System.out.println("Invalid selection.");
+			System.out.println("Enter the number of the car you wish to remove from the lot:");
+			input = scan.nextLine();
+			try {
+				select = Integer.parseInt(input);
+			} catch (Exception e) {
+				System.out.println("Invalid selection.");
+				continue;
+			}
+
+			if (select == 0) {
+				return;
+			}
+
+			try {
+				cars.remove(select - 1);
+				cDAO.writeCar(cars);
+			} catch (Exception e) {
+				System.out.println("Invalid selection.");
+				continue;
+			}
+
+			System.out.println("Car #" + select + " removed.");
 			return;
-		}
-
-		ArrayList<Car> cars = (ArrayList<Car>) cDAO.readCars();
-		try {
-			cars.remove(index);
-		} catch (Exception e) {
-			System.out.println("Invalid selection.");
-			return;
-		}
-
-		cDAO.writeObject(cars);
-		System.out.println("Car #" + index + " removed.");
-		return;
+		} while (select != 0);
 
 	}
 
+	public static void viewCarLot() {
+		int i = 1;
+		if (cars.isEmpty()) {
+			System.out.println("NO CARS IN AVAILABLE");
+			return;
+		}
+		for (Car car : cars) {
+			System.out.println("[" + i + "] " + car);
+			i++;
+		}
+	}
+
+	public static void makeOffer() {
+		int select = -1;
+		if (cars.isEmpty()) {
+			System.out.println("No cars in lot!");
+			return;
+		}
+		do {
+			int offer = 0;
+			System.out.println("Enter the number of the desired car:");
+			try {
+				select = Integer.parseInt(scan.nextLine());
+			} catch (Exception e) {
+				System.out.println("Invalid selection.");
+				continue;
+			}
+			if (select == 0) {
+				return;
+			}
+			Car car = cars.get(select - 1);
+			System.out.println(car);
+			System.out.println("Is this the car you want? (y/n)");
+			String option = scan.nextLine();
+			if (option.toUpperCase().charAt(0) == 'Y') {
+				System.out.println("What is your offer? Enter only digits");
+				try {
+					offer = Integer.parseInt(scan.nextLine());
+				} catch (Exception e) {
+					System.out.println("Invalid offer");
+					return;
+				}
+				System.out.println("Is this acceptable?");
+				option = scan.nextLine();
+				if (option.toUpperCase().charAt(0) == 'Y') {
+					car.addOffer(usingUser.getUsername(), offer);
+					cDAO.writeCar(cars);
+					System.out.println("Your offer has been logged.");
+				}
+			}
+		} while (select != 0);
+	}
+
+	public static void getBoughtCars() {
+		try {
+			for (Car each : bought) {
+				System.out.println(each.getYear() + " " + each.getColour() + " " + each.getMake() + " "
+						+ each.getModel() + " - " + each.getOwner() + " " + each.getPayment());
+			}
+		} catch (NullPointerException e) {
+			System.out.println("No one has bought a car yet!");
+			return;
+		}
+	}
 }

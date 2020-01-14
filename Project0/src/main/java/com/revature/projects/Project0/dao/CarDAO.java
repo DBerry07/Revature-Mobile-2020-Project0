@@ -12,8 +12,22 @@ import com.revature.projects.Project0.pojo.Car;
 
 public class CarDAO{
 	
-	public void writeObject(Object obj) {
+	public void writeCar(Object obj) {
 		String fileName = "cars.dat";
+		try (FileOutputStream fos = new FileOutputStream(fileName);
+				ObjectOutputStream oos = new ObjectOutputStream(fos)){
+			oos.writeObject(obj);
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void writeBought(Object obj) {
+		String fileName = "bought.dat";
 		try (FileOutputStream fos = new FileOutputStream(fileName);
 				ObjectOutputStream oos = new ObjectOutputStream(fos)){
 			oos.writeObject(obj);
@@ -34,7 +48,18 @@ public class CarDAO{
 			obj = ois.readObject();
 		}
 		catch (Exception e) {
-			writeObject(new ArrayList<Car>());
+		}
+		return obj;
+	}
+	
+	public Object readBoughtCars() {
+		String filename = "bought.dat";
+		Object obj = null;
+		try (FileInputStream fis = new FileInputStream(filename);
+				ObjectInputStream ois = new ObjectInputStream(fis)) {
+			obj = ois.readObject();
+		}
+		catch (Exception e) {
 		}
 		return obj;
 	}
