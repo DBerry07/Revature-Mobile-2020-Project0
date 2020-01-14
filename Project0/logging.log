@@ -46,3 +46,42 @@
 2020-01-14 15:05:38 DEBUG Driver:52 - ==BOUGHT CARS==
 2020-01-14 15:05:38 DEBUG Driver:54 - 333 444 111 222 555
 2020-01-14 15:05:38 DEBUG Driver:56 - Owner: user, Payment: 660
+2020-01-14 15:14:51 DEBUG Driver:90 - ==USERS==
+2020-01-14 15:14:51 DEBUG Driver:91 - [admin, user]
+2020-01-14 15:14:51 DEBUG Driver:93 - admin true pass
+2020-01-14 15:14:51 DEBUG Driver:93 - user false pass
+2020-01-14 15:14:51 DEBUG Driver:97 - ==LOT CARS==
+2020-01-14 15:14:51 DEBUG Driver:99 - 2005 grey toyota matrix 8000
+2020-01-14 15:14:51 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:14:51 DEBUG Driver:99 - 2011 yellow honda fit 18000
+2020-01-14 15:14:51 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:14:51 DEBUG Driver:105 - ==BOUGHT CARS==
+2020-01-14 15:14:51 DEBUG Driver:107 - 333 444 111 222 555
+2020-01-14 15:14:51 DEBUG Driver:109 - Owner: user, Payment: 660
+2020-01-14 15:15:20 DEBUG Driver:105 - ==BOUGHT CARS==
+2020-01-14 15:15:20 DEBUG Driver:107 - 333 444 111 222 555
+2020-01-14 15:15:20 DEBUG Driver:109 - Owner: user, Payment: 590
+2020-01-14 15:15:36 DEBUG Driver:97 - ==LOT CARS==
+2020-01-14 15:15:36 DEBUG Driver:99 - 2005 grey toyota matrix 8000
+2020-01-14 15:15:36 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:15:36 DEBUG Driver:99 - 2011 yellow honda fit 18000
+2020-01-14 15:15:36 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:16:49 DEBUG Driver:97 - ==LOT CARS==
+2020-01-14 15:16:49 DEBUG Driver:99 - 2005 grey toyota matrix 8000
+2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:16:49 DEBUG Driver:99 - 2011 yellow honda fit 18000
+2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:16:49 DEBUG Driver:99 - 2001 silver ford t150 11000
+2020-01-14 15:16:49 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:17:33 DEBUG Driver:97 - ==LOT CARS==
+2020-01-14 15:17:33 DEBUG Driver:99 - 2005 grey toyota matrix 8000
+2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:17:33 DEBUG Driver:99 - 2011 yellow honda fit 18000
+2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:17:33 DEBUG Driver:99 - 2001 silver ford t150 11000
+2020-01-14 15:17:33 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:18:19 DEBUG Driver:97 - ==LOT CARS==
+2020-01-14 15:18:19 DEBUG Driver:99 - 2011 yellow honda fit 18000
+2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:18:19 DEBUG Driver:99 - 2001 silver ford t150 11000
+2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0

@@ -38,23 +38,9 @@ public class Driver {
 		bought = (ArrayList<Car>) bDAO.read();
 
 		{
-			log.debug("==USERS==");
-			log.debug(users.toString());
-			for (User each : users) {
-				log.debug(each.getUsername() + " " + each.getAdmin() + " " + each.getPassword());
-			}
-			log.debug("==LOT CARS==");
-			for (Car car : cars) {
-				log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
-						+ car.getPrice());
-				log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
-			}
-			log.debug("==BOUGHT CARS==");
-			for (Car car : bought) {
-				log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
-						+ car.getPrice());
-				log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
-			}
+			logUserArray();
+			logCarArray();
+			logBoughtArray();
 		}
 
 		if (users == null) {
@@ -98,6 +84,30 @@ public class Driver {
 
 		System.out.println("Exiting...");
 
+	}
+	
+	public static void logUserArray() {
+		log.debug("==USERS==");
+		log.debug(users.toString());
+		for (User each : users) {
+			log.debug(each.getUsername() + " " + each.getAdmin() + " " + each.getPassword());
+		}
+	}
+	public static void logCarArray() {
+		log.debug("==LOT CARS==");
+		for (Car car : cars) {
+			log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
+					+ car.getPrice());
+			log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
+		}
+	}
+	public static void logBoughtArray() {
+		log.debug("==BOUGHT CARS==");
+		for (Car car : bought) {
+			log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
+					+ car.getPrice());
+			log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
+		}
 	}
 
 	public static void userLogin() {
@@ -156,7 +166,6 @@ public class Driver {
 				userBought.add(each);
 			}
 		}
-		System.out.println("\n");
 		if (userBought.isEmpty()) {
 			System.out.println("You haven't bought any cars!");
 			return;
@@ -198,7 +207,8 @@ public class Driver {
 					return;
 				}
 				car.setPayment(car.getPayment() - payoff);
-				bDAO.write(bought);;
+				bDAO.write(bought);
+				logBoughtArray();
 				System.out.println("Payment remaining: $" + car.getPayment());
 				return;
 			}
@@ -237,6 +247,7 @@ public class Driver {
 				selection = Integer.parseInt(scan.nextLine());
 			} catch (Exception e) {
 				System.out.println("\nInvalid option.");
+				continue;
 			}
 			if (selection == 1) {
 				viewCarLot();
@@ -345,14 +356,17 @@ public class Driver {
 					if (sel == 1) {
 						car.getOffers().remove(userOffer.get(selectedOffer - 1));
 						cDAO.write(cars);
+						logCarArray();
 						System.out.println("Offer rejected.");
 					} else if (sel == 2) {
 						car.setOwner(userOffer.get(selectedOffer - 1),
 								car.getOffers().get(userOffer.get(selectedOffer - 1)));
 						bought.add(car);
 						bDAO.write(bought);
+						logBoughtArray();
 						cars.remove(carIndex - 1);
 						cDAO.write(cars);
+						logCarArray();
 						System.out.println("Car sold.");
 						return;
 					}
@@ -410,6 +424,7 @@ public class Driver {
 			if (option.toUpperCase().charAt(0) == 'Y') {
 				cars.add(new Car(make, model, year, colour, price));
 				cDAO.write(cars);
+				logCarArray();
 				return;
 			}
 		}
@@ -436,6 +451,7 @@ public class Driver {
 			try {
 				cars.remove(select - 1);
 				cDAO.write(cars);
+				logCarArray();
 			} catch (Exception e) {
 				System.out.println("Invalid selection.");
 				continue;
@@ -494,6 +510,7 @@ public class Driver {
 				if (option.toUpperCase().charAt(0) == 'Y') {
 					car.addOffer(usingUser.getUsername(), offer);
 					cDAO.write(cars);
+					logCarArray();
 					System.out.println("Your offer has been logged.");
 				}
 			}
