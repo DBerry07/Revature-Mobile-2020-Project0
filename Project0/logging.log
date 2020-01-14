@@ -85,3 +85,80 @@
 2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0
 2020-01-14 15:18:19 DEBUG Driver:99 - 2001 silver ford t150 11000
 2020-01-14 15:18:19 DEBUG Driver:101 - Owner: null, Payment: 0
+2020-01-14 15:28:39 DEBUG Driver:17 - ==USERS==
+2020-01-14 15:28:39 DEBUG Driver:18 - [admin, user]
+2020-01-14 15:28:39 DEBUG Driver:20 - admin true pass
+2020-01-14 15:28:39 DEBUG Driver:20 - user false pass
+2020-01-14 15:28:39 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:28:39 DEBUG Driver:26 - 2011 yellow honda fit 18000
+2020-01-14 15:28:39 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:28:39 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:28:39 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:28:39 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:28:39 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:28:39 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:30:14 DEBUG Driver:17 - ==USERS==
+2020-01-14 15:30:14 DEBUG Driver:18 - [admin, user, david]
+2020-01-14 15:30:14 DEBUG Driver:20 - admin true pass
+2020-01-14 15:30:14 DEBUG Driver:20 - user false pass
+2020-01-14 15:30:14 DEBUG Driver:20 - david false pass
+2020-01-14 15:30:14 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:30:14 DEBUG Driver:26 - 2011 yellow honda fit 18000
+2020-01-14 15:30:14 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:14 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:30:14 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:14 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:30:14 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:30:14 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:30:30 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:30:30 DEBUG Driver:26 - 2011 yellow honda fit 18000
+2020-01-14 15:30:30 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:30 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:30:30 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:39 DEBUG Driver:17 - ==USERS==
+2020-01-14 15:30:39 DEBUG Driver:18 - [admin, user, david]
+2020-01-14 15:30:39 DEBUG Driver:20 - admin true pass
+2020-01-14 15:30:39 DEBUG Driver:20 - user false pass
+2020-01-14 15:30:39 DEBUG Driver:20 - david false pass
+2020-01-14 15:30:39 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:30:39 DEBUG Driver:26 - 2011 yellow honda fit 18000
+2020-01-14 15:30:39 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:39 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:30:39 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:30:39 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:30:39 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:30:39 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:31:01 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:31:01 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:31:01 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:31:01 DEBUG Driver:34 - 2011 yellow honda fit 18000
+2020-01-14 15:31:01 DEBUG Driver:36 - Owner: david, Payment: 17999
+2020-01-14 15:31:01 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:31:01 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:31:01 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:31:43 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:31:43 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:31:43 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:31:43 DEBUG Driver:34 - 2011 yellow honda fit 18000
+2020-01-14 15:31:43 DEBUG Driver:36 - Owner: david, Payment: 17000
+2020-01-14 15:32:07 DEBUG Driver:17 - ==USERS==
+2020-01-14 15:32:07 DEBUG Driver:18 - [admin, user, david]
+2020-01-14 15:32:07 DEBUG Driver:20 - admin true pass
+2020-01-14 15:32:07 DEBUG Driver:20 - user false pass
+2020-01-14 15:32:07 DEBUG Driver:20 - david false pass
+2020-01-14 15:32:07 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:32:07 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:32:07 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:32:07 DEBUG Driver:32 - ==BOUGHT CARS==
+2020-01-14 15:32:07 DEBUG Driver:34 - 333 444 111 222 555
+2020-01-14 15:32:07 DEBUG Driver:36 - Owner: user, Payment: 590
+2020-01-14 15:32:07 DEBUG Driver:34 - 2011 yellow honda fit 18000
+2020-01-14 15:32:07 DEBUG Driver:36 - Owner: david, Payment: 17000
+2020-01-14 15:33:12 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:33:12 DEBUG Driver:26 - 2001 silver ford t150 11000
+2020-01-14 15:33:12 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:33:12 DEBUG Driver:26 - 2066 black toyota corolla 35000
+2020-01-14 15:33:12 DEBUG Driver:28 - Owner: null, Payment: 0
+2020-01-14 15:33:31 DEBUG Driver:24 - ==LOT CARS==
+2020-01-14 15:33:31 DEBUG Driver:26 - 2066 black toyota corolla 35000
+2020-01-14 15:33:31 DEBUG Driver:28 - Owner: null, Payment: 0

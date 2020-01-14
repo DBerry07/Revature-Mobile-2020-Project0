@@ -13,11 +13,11 @@ import com.revature.projects.Project0.dao.UserDAO;
 import com.revature.projects.Project0.pojo.Car;
 import com.revature.projects.Project0.pojo.User;
 import com.revature.projects.Project0.service.UserLoginService;
+import com.revature.projects.Project0.util.*;
 
 public class Driver {
 
 	private static Scanner scan = new Scanner(System.in);
-	static final Logger log = Logger.getLogger(Driver.class);
 	public static CarDAO cDAO = new CarDAO();
 	public static UserDAO uDAO = new UserDAO();
 	public static BoughtDAO bDAO = new BoughtDAO();
@@ -38,9 +38,9 @@ public class Driver {
 		bought = (ArrayList<Car>) bDAO.read();
 
 		{
-			logUserArray();
-			logCarArray();
-			logBoughtArray();
+			loggers.logUserArray(users);
+			loggers.logCarArray(cars);
+			loggers.logBoughtArray(bought);
 		}
 
 		if (users == null) {
@@ -86,29 +86,7 @@ public class Driver {
 
 	}
 	
-	public static void logUserArray() {
-		log.debug("==USERS==");
-		log.debug(users.toString());
-		for (User each : users) {
-			log.debug(each.getUsername() + " " + each.getAdmin() + " " + each.getPassword());
-		}
-	}
-	public static void logCarArray() {
-		log.debug("==LOT CARS==");
-		for (Car car : cars) {
-			log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
-					+ car.getPrice());
-			log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
-		}
-	}
-	public static void logBoughtArray() {
-		log.debug("==BOUGHT CARS==");
-		for (Car car : bought) {
-			log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
-					+ car.getPrice());
-			log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
-		}
-	}
+	
 
 	public static void userLogin() {
 		System.out.println("Enter username: ");
@@ -208,7 +186,7 @@ public class Driver {
 				}
 				car.setPayment(car.getPayment() - payoff);
 				bDAO.write(bought);
-				logBoughtArray();
+				loggers.logBoughtArray(bought);
 				System.out.println("Payment remaining: $" + car.getPayment());
 				return;
 			}
@@ -356,17 +334,17 @@ public class Driver {
 					if (sel == 1) {
 						car.getOffers().remove(userOffer.get(selectedOffer - 1));
 						cDAO.write(cars);
-						logCarArray();
+						loggers.logCarArray(cars);
 						System.out.println("Offer rejected.");
 					} else if (sel == 2) {
 						car.setOwner(userOffer.get(selectedOffer - 1),
 								car.getOffers().get(userOffer.get(selectedOffer - 1)));
 						bought.add(car);
 						bDAO.write(bought);
-						logBoughtArray();
+						loggers.logBoughtArray(bought);
 						cars.remove(carIndex - 1);
 						cDAO.write(cars);
-						logCarArray();
+						loggers.logCarArray(cars);
 						System.out.println("Car sold.");
 						return;
 					}
@@ -424,7 +402,7 @@ public class Driver {
 			if (option.toUpperCase().charAt(0) == 'Y') {
 				cars.add(new Car(make, model, year, colour, price));
 				cDAO.write(cars);
-				logCarArray();
+				loggers.logCarArray(cars);
 				return;
 			}
 		}
@@ -451,7 +429,7 @@ public class Driver {
 			try {
 				cars.remove(select - 1);
 				cDAO.write(cars);
-				logCarArray();
+				loggers.logCarArray(cars);
 			} catch (Exception e) {
 				System.out.println("Invalid selection.");
 				continue;
@@ -510,7 +488,7 @@ public class Driver {
 				if (option.toUpperCase().charAt(0) == 'Y') {
 					car.addOffer(usingUser.getUsername(), offer);
 					cDAO.write(cars);
-					logCarArray();
+					loggers.logCarArray(cars);
 					System.out.println("Your offer has been logged.");
 				}
 			}
