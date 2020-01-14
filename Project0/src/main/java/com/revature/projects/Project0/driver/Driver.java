@@ -1,31 +1,62 @@
 package com.revature.projects.Project0.driver;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Set;
 
-import com.revature.projects.Project0.dao.*;
-import com.revature.projects.Project0.pojo.*;
-import com.revature.projects.Project0.service.*;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+import com.revature.projects.Project0.dao.BoughtDAO;
+import com.revature.projects.Project0.dao.CarDAO;
+import com.revature.projects.Project0.dao.UserDAO;
+import com.revature.projects.Project0.pojo.Car;
+import com.revature.projects.Project0.pojo.User;
+import com.revature.projects.Project0.service.UserLoginService;
 
 public class Driver {
 
 	private static Scanner scan = new Scanner(System.in);
-
+	static final Logger log = Logger.getLogger(Driver.class);
 	public static CarDAO cDAO = new CarDAO();
 	public static UserDAO uDAO = new UserDAO();
+	public static BoughtDAO bDAO = new BoughtDAO();
 	public static User usingUser;
 	public static ArrayList<User> users;
 	public static ArrayList<Car> cars;
 	public static ArrayList<Car> bought;
+	public static String uFilename = "users.dat";
+	public static String cFilename = "cars.dat";
+	public static String bFilename = "bought.dat";
 
 	public static void main(String[] args) {
+		PropertyConfigurator.configure("./src/main/resources/log4j.properties");
 		String option = "";
 		int selection = -1;
-		users = (ArrayList<User>) uDAO.readUsers();
-		cars = (ArrayList<Car>) cDAO.readCars();
-		bought = (ArrayList<Car>) cDAO.readBoughtCars();
+		users = (ArrayList<User>) uDAO.read();
+		cars = (ArrayList<Car>) cDAO.read();
+		bought = (ArrayList<Car>) bDAO.read();
+
+		{
+			log.debug("==USERS==");
+			log.debug(users.toString());
+			for (User each : users) {
+				log.debug(each.getUsername() + " " + each.getAdmin() + " " + each.getPassword());
+			}
+			log.debug("==LOT CARS==");
+			for (Car car : cars) {
+				log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
+						+ car.getPrice());
+				log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
+			}
+			log.debug("==BOUGHT CARS==");
+			for (Car car : bought) {
+				log.debug(car.getYear() + " " + car.getColour() + " " + car.getMake() + " " + car.getModel() + " "
+						+ car.getPrice());
+				log.debug("Owner: " + car.getOwner() + ", Payment: " + car.getPayment());
+			}
+		}
+
 		if (users == null) {
 			users = new ArrayList<User>();
 		}
@@ -167,7 +198,7 @@ public class Driver {
 					return;
 				}
 				car.setPayment(car.getPayment() - payoff);
-				cDAO.writeBought(bought);
+				bDAO.write(bought);;
 				System.out.println("Payment remaining: $" + car.getPayment());
 				return;
 			}
@@ -193,7 +224,6 @@ public class Driver {
 
 	public static void adminMenu() {
 		int selection = -1;
-		String option = "y";
 		do {
 			System.out.println("\nPlease make a selection: ");
 			System.out.println("[1] View Lot");
@@ -254,7 +284,7 @@ public class Driver {
 		}
 		System.out.println("Make this an admin account? (y/n)");
 		String question = scan.nextLine();
-		
+
 		if (question.length() < 1) {
 			System.out.println("INVALID SELECTION");
 			return;
@@ -314,15 +344,15 @@ public class Driver {
 					int sel = Integer.parseInt(scan.nextLine());
 					if (sel == 1) {
 						car.getOffers().remove(userOffer.get(selectedOffer - 1));
-						cDAO.writeCar(cars);
+						cDAO.write(cars);
 						System.out.println("Offer rejected.");
 					} else if (sel == 2) {
 						car.setOwner(userOffer.get(selectedOffer - 1),
 								car.getOffers().get(userOffer.get(selectedOffer - 1)));
 						bought.add(car);
-						cDAO.writeBought(bought);
+						bDAO.write(bought);
 						cars.remove(carIndex - 1);
-						cDAO.writeCar(cars);
+						cDAO.write(cars);
 						System.out.println("Car sold.");
 						return;
 					}
@@ -379,7 +409,7 @@ public class Driver {
 			String option = scan.nextLine();
 			if (option.toUpperCase().charAt(0) == 'Y') {
 				cars.add(new Car(make, model, year, colour, price));
-				cDAO.writeCar(cars);
+				cDAO.write(cars);
 				return;
 			}
 		}
@@ -405,7 +435,7 @@ public class Driver {
 
 			try {
 				cars.remove(select - 1);
-				cDAO.writeCar(cars);
+				cDAO.write(cars);
 			} catch (Exception e) {
 				System.out.println("Invalid selection.");
 				continue;
@@ -463,7 +493,7 @@ public class Driver {
 				option = scan.nextLine();
 				if (option.toUpperCase().charAt(0) == 'Y') {
 					car.addOffer(usingUser.getUsername(), offer);
-					cDAO.writeCar(cars);
+					cDAO.write(cars);
 					System.out.println("Your offer has been logged.");
 				}
 			}

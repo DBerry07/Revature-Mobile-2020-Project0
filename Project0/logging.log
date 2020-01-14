@@ -1,0 +1,48 @@
+2020-01-14 14:39:00 DEBUG Driver:36 - ==USERS==
+2020-01-14 14:39:00 DEBUG Driver:37 - [admin, user]
+2020-01-14 14:39:00 DEBUG Driver:39 - admin true pass
+2020-01-14 14:39:00 DEBUG Driver:39 - user false pass
+2020-01-14 14:39:00 DEBUG Driver:41 - ==LOT CARS==
+2020-01-14 14:39:00 DEBUG Driver:43 - 2005 grey toyota matrix 8000
+2020-01-14 14:39:00 DEBUG Driver:45 - Owner: null, Payment: 0
+2020-01-14 14:39:00 DEBUG Driver:43 - 2011 yellow honda fit 18000
+2020-01-14 14:39:00 DEBUG Driver:45 - Owner: null, Payment: 0
+2020-01-14 14:39:00 DEBUG Driver:47 - ==BOUGHT CARS==
+2020-01-14 14:39:00 DEBUG Driver:49 - 333 444 111 222 555
+2020-01-14 14:39:00 DEBUG Driver:51 - Owner: user, Payment: 660
+2020-01-14 14:41:15 DEBUG Driver:37 - ==USERS==
+2020-01-14 14:41:15 DEBUG Driver:38 - [admin, user]
+2020-01-14 14:41:15 DEBUG Driver:40 - admin true pass
+2020-01-14 14:41:15 DEBUG Driver:40 - user false pass
+2020-01-14 14:41:15 DEBUG Driver:42 - ==LOT CARS==
+2020-01-14 14:41:15 DEBUG Driver:44 - 2005 grey toyota matrix 8000
+2020-01-14 14:41:15 DEBUG Driver:46 - Owner: null, Payment: 0
+2020-01-14 14:41:15 DEBUG Driver:44 - 2011 yellow honda fit 18000
+2020-01-14 14:41:15 DEBUG Driver:46 - Owner: null, Payment: 0
+2020-01-14 14:41:15 DEBUG Driver:48 - ==BOUGHT CARS==
+2020-01-14 14:41:15 DEBUG Driver:50 - 333 444 111 222 555
+2020-01-14 14:41:15 DEBUG Driver:52 - Owner: user, Payment: 660
+2020-01-14 14:42:10 DEBUG Driver:37 - ==USERS==
+2020-01-14 14:42:10 DEBUG Driver:38 - [admin, user]
+2020-01-14 14:42:10 DEBUG Driver:40 - admin true pass
+2020-01-14 14:42:10 DEBUG Driver:40 - user false pass
+2020-01-14 14:42:10 DEBUG Driver:42 - ==LOT CARS==
+2020-01-14 14:42:10 DEBUG Driver:44 - 2005 grey toyota matrix 8000
+2020-01-14 14:42:10 DEBUG Driver:46 - Owner: null, Payment: 0
+2020-01-14 14:42:10 DEBUG Driver:44 - 2011 yellow honda fit 18000
+2020-01-14 14:42:10 DEBUG Driver:46 - Owner: null, Payment: 0
+2020-01-14 14:42:10 DEBUG Driver:48 - ==BOUGHT CARS==
+2020-01-14 14:42:10 DEBUG Driver:50 - 333 444 111 222 555
+2020-01-14 14:42:10 DEBUG Driver:52 - Owner: user, Payment: 660
+2020-01-14 15:05:38 DEBUG Driver:41 - ==USERS==
+2020-01-14 15:05:38 DEBUG Driver:42 - [admin, user]
+2020-01-14 15:05:38 DEBUG Driver:44 - admin true pass
+2020-01-14 15:05:38 DEBUG Driver:44 - user false pass
+2020-01-14 15:05:38 DEBUG Driver:46 - ==LOT CARS==
+2020-01-14 15:05:38 DEBUG Driver:48 - 2005 grey toyota matrix 8000
+2020-01-14 15:05:38 DEBUG Driver:50 - Owner: null, Payment: 0
+2020-01-14 15:05:38 DEBUG Driver:48 - 2011 yellow honda fit 18000
+2020-01-14 15:05:38 DEBUG Driver:50 - Owner: null, Payment: 0
+2020-01-14 15:05:38 DEBUG Driver:52 - ==BOUGHT CARS==
+2020-01-14 15:05:38 DEBUG Driver:54 - 333 444 111 222 555
+2020-01-14 15:05:38 DEBUG Driver:56 - Owner: user, Payment: 660

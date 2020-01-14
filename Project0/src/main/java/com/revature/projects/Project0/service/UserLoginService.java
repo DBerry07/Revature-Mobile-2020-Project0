@@ -8,10 +8,9 @@ import com.revature.projects.Project0.pojo.User;
 public class UserLoginService {
 
 	private static UserDAO uDAO = new UserDAO();
-	private static String filename = "users.dat";
 
 	public static boolean checkUser(String username, String password) {
-		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		ArrayList<User> users = (ArrayList<User>) uDAO.read();
 		if (users == null) {
 			return false;
 		}
@@ -26,7 +25,7 @@ public class UserLoginService {
 	}
 	
 	public static boolean checkAdmin(String username, String password) {
-		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		ArrayList<User> users = (ArrayList<User>) uDAO.read();
 		if (users == null) {
 			return false;
 		}
@@ -42,7 +41,7 @@ public class UserLoginService {
 
 	public static boolean createUser(String newUsername, String newPassword, boolean admin) {
 
-		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		ArrayList<User> users = (ArrayList<User>) uDAO.read();
 
 		try {
 			for (User each : users) {
@@ -55,12 +54,12 @@ public class UserLoginService {
 			users = new ArrayList<User>();
 			users.add(new User(newUsername, newPassword, admin));
 		}
-		uDAO.writeObject(users);
+		uDAO.write(users);
 		return true;
 	}
 	
 	public static User getUser(String username, String password) {
-		ArrayList<User> users = (ArrayList<User>) uDAO.readUsers();
+		ArrayList<User> users = (ArrayList<User>) uDAO.read();
 		
 		try {
 			for (User each : users) {

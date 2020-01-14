@@ -7,9 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class UserDAO implements DAO{
+public class BoughtDAO implements DAO{
 	
-	private static final String filename = "users.dat";
+	private static final String filename = "bought.dat";
+	
 	
 	public void write(Object obj) {
 		try (FileOutputStream fos = new FileOutputStream(filename);
@@ -31,7 +32,6 @@ public class UserDAO implements DAO{
 			obj = ois.readObject();
 		}
 		catch (Exception e) {
-			
 		}
 		return obj;
 	}

@@ -1,11 +1,8 @@
 package com.revature.projects.Project0.pojo;
 
-import java.awt.List;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 @SuppressWarnings("serial")
 public class Car implements Serializable {
