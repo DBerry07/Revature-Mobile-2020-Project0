@@ -92,4 +92,79 @@ public class CarDAO{
 		removeCar.setInt(1, car.getCarID());
 		removeCar.executeUpdate();
 	}
+	
+	public ArrayList<Car> viewBoughtCars(String username){
+		Connection conn = ConnectionFactory.getConnection();
+		ResultSet rs = null;
+		ArrayList<Car> cars = new ArrayList<Car>();
+		String selectString = "select car_id, make, model, make_year, colour, price, bought_price from project0.cars where car_owner = ?";
+		PreparedStatement selectCars = null;
+		try {
+			selectCars = conn.prepareStatement(selectString);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			selectCars.setString(1, username);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			rs = selectCars.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			while (rs.next()) {
+				try {
+					System.out.println(rs.getInt(7));
+					Car newCar = new Car(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getInt(6), 
+							username, rs.getInt(7));
+					cars.add(newCar);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return cars;
+		
+	}
+	
+	public void updatePayment(int carID, int amount) {
+		Connection conn = ConnectionFactory.getConnection();
+		String updateString = "update project0.cars set bought_price = ? where car_id = ?";
+		PreparedStatement updatePay = null;
+		
+		try {
+			updatePay = conn.prepareStatement(updateString);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			updatePay.setInt(1, amount);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			updatePay.setInt(2,  carID);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			updatePay.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

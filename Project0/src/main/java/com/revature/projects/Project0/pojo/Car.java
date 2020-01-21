@@ -16,11 +16,10 @@ public class Car implements Serializable {
 	private Map<String, Integer> offers;
 	private String owner;
 	private int payLeft;
-	private int boughtPrice;
 	
 	public Car() {} //No args constructor
 	
-	public Car(int carID, String make, String model, int year, String colour, int price, String owner, int boughtPrice) {
+	public Car(int carID, String make, String model, int year, String colour, int price, String owner, int payLeft) {
 		this.carID = carID;
 		this.make = make;
 		this.model = model;
@@ -29,7 +28,7 @@ public class Car implements Serializable {
 		this.offers = new HashMap<String, Integer>();
 		this.price = price;
 		this.owner = owner;
-		this.boughtPrice = boughtPrice;
+		this.payLeft = payLeft;
 	}
 	
 	

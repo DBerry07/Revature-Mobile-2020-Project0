@@ -141,11 +141,7 @@ public class Driver {
 	public static void viewBoughtCars() {
 		int i = 1;
 		ArrayList<Car> userBought = new ArrayList<Car>();
-		for (Car each : bought) {
-			if (each.getOwner().equals(usingUsername)) {
-				userBought.add(each);
-			}
-		}
+		userBought = cDAO.viewBoughtCars(usingUsername);
 		if (userBought.isEmpty()) {
 			System.out.println("You haven't bought any cars!");
 			return;
@@ -193,10 +189,9 @@ public class Driver {
 					System.out.println("INVALID AMOUNT");
 					return;
 				}
-				car.setPayment(car.getPayment() - payoff);
-				bDAO.write(bought);
+				cDAO.updatePayment(car.getCarID(), car.getPayment() - payoff);
 				//loggers.logBoughtArray(bought);
-				System.out.println("Payment remaining: $" + car.getPayment());
+				System.out.println("Payment remaining: $" + (car.getPayment() - payoff));
 				return;
 			}
 			return;
@@ -349,9 +344,22 @@ public class Driver {
 					System.out.println("[2] Reject");
 					int sel = Integer.parseInt(scan.nextLine());
 					if (sel == 1) {
-						
+						try {
+							oDAO.acceptOffer(car.getCarID(), selectedUser);
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						try {
+							cars = cDAO.readAll();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						//loggers.logCarArray(cars);
 						System.out.println("Car sold.");
+						return;
+						
 					} else if (sel == 2) {
 						try {
 							oDAO.rejectOffer(car.getCarID(), selectedUser);
@@ -513,7 +521,6 @@ public class Driver {
 				System.out.println("Is this acceptable?");
 				option = scan.nextLine();
 				if (option.toUpperCase().charAt(0) == 'Y') {
-					//TODO FIX USER ACCOUNTS CREATED IN SAME SESSION MAKING OFFERS
 					oDAO.insertOffer(car.getCarID(), usingUsername, offer);
 					//loggers.logCarArray(cars);
 					System.out.println("Your offer has been logged.");
@@ -523,14 +530,6 @@ public class Driver {
 	}
 
 	public static void getBoughtCars() {
-		try {
-			for (Car each : bought) {
-				System.out.println(each.getYear() + " " + each.getColour() + " " + each.getMake() + " "
-						+ each.getModel() + " - " + each.getOwner() + " " + each.getPayment());
-			}
-		} catch (NullPointerException e) {
-			System.out.println("No one has bought a car yet!");
-			return;
-		}
+		
 	}
 }

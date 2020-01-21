@@ -53,11 +53,11 @@ public class OfferDAO {
 		}
 		
 		try {
-			updateOffer.executeUpdate();
+			insertOffer.executeUpdate();
 		}
 		catch (SQLException e){
 			try {
-				insertOffer.executeUpdate();
+				updateOffer.executeUpdate();
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -84,11 +84,13 @@ public class OfferDAO {
 		offerAmount.setInt(1, carID);
 		offerAmount.setString(2,  username);
 		rs = offerAmount.executeQuery();
+		System.out.println(offerAmount.toString());
 		while (rs.next()) {
 			offer = rs.getInt(1);
 		}
+		System.out.println(offer);
 		
-		String ownerString = "update project0.cars set owner = ?, bought_at = ? where car_id = ?";
+		String ownerString = "update project0.cars set car_owner = ?, bought_price = ? where car_id = ?";
 		PreparedStatement ownerSet = conn.prepareStatement(ownerString);
 		ownerSet.setString(1, username);
 		ownerSet.setInt(2, offer);
