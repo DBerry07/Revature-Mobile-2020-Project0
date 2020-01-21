@@ -1,56 +1,744 @@
-2020-01-14 16:09:50 DEBUG Driver:16 - ==USERS==
-2020-01-14 16:09:50 DEBUG Driver:17 - [admin, user, david]
-2020-01-14 16:09:50 DEBUG Driver:19 - admin true pass
-2020-01-14 16:09:50 DEBUG Driver:19 - user false pass
-2020-01-14 16:09:50 DEBUG Driver:19 - david false pass
-2020-01-14 16:09:50 DEBUG Driver:23 - ==LOT CARS==
-2020-01-14 16:09:50 DEBUG Driver:25 - 2066 black toyota corolla 35000
-2020-01-14 16:09:50 DEBUG Driver:27 - Owner: null, Payment: 0
-2020-01-14 16:09:50 DEBUG Driver:31 - ==BOUGHT CARS==
-2020-01-14 16:09:50 DEBUG Driver:33 - 333 444 111 222 555
-2020-01-14 16:09:50 DEBUG Driver:35 - Owner: user, Payment: 590
-2020-01-14 16:09:50 DEBUG Driver:33 - 2011 yellow honda fit 18000
-2020-01-14 16:09:50 DEBUG Driver:35 - Owner: david, Payment: 17000
-2020-01-14 16:10:58 DEBUG Driver:16 - ................USERS.................
-2020-01-14 16:10:58 DEBUG Driver:17 - [admin, user, david]
-2020-01-14 16:10:58 DEBUG Driver:19 - admin true pass
-2020-01-14 16:10:58 DEBUG Driver:19 - user false pass
-2020-01-14 16:10:58 DEBUG Driver:19 - david false pass
-2020-01-14 16:10:58 DEBUG Driver:23 - .............LOT CARS..................
-2020-01-14 16:10:58 DEBUG Driver:25 - 2066 black toyota corolla 35000
-2020-01-14 16:10:58 DEBUG Driver:27 - Owner: null, Payment: 0
-2020-01-14 16:10:58 DEBUG Driver:31 - ...................BOUGHT CARS.........................
-2020-01-14 16:10:58 DEBUG Driver:33 - 333 444 111 222 555
-2020-01-14 16:10:58 DEBUG Driver:35 - Owner: user, Payment: 590
-2020-01-14 16:10:58 DEBUG Driver:33 - 2011 yellow honda fit 18000
-2020-01-14 16:10:58 DEBUG Driver:35 - Owner: david, Payment: 17000
-2020-01-14 16:18:38 DEBUG Driver:16 - ................USERS.................
-2020-01-14 16:18:38 DEBUG Driver:17 - [admin, user, david]
-2020-01-14 16:18:38 DEBUG Driver:19 - admin true pass
-2020-01-14 16:18:38 DEBUG Driver:19 - user false pass
-2020-01-14 16:18:38 DEBUG Driver:19 - david false pass
-2020-01-14 16:18:38 DEBUG Driver:23 - .............LOT CARS..................
-2020-01-14 16:18:38 DEBUG Driver:25 - 2066 black toyota corolla 35000
-2020-01-14 16:18:38 DEBUG Driver:27 - Owner: null, Payment: 0
-2020-01-14 16:18:38 DEBUG Driver:31 - ...................BOUGHT CARS.........................
-2020-01-14 16:18:38 DEBUG Driver:33 - 333 444 111 222 555
-2020-01-14 16:18:38 DEBUG Driver:35 - Owner: user, Payment: 590
-2020-01-14 16:18:38 DEBUG Driver:33 - 2011 yellow honda fit 18000
-2020-01-14 16:18:38 DEBUG Driver:35 - Owner: david, Payment: 17000
-2020-01-14 16:20:43 DEBUG Driver:23 - .............LOT CARS..................
-2020-01-14 16:21:02 DEBUG Driver:23 - .............LOT CARS..................
-2020-01-14 16:21:02 DEBUG Driver:25 - 2006 grey toyora matrix 2000
-2020-01-14 16:21:02 DEBUG Driver:27 - Owner: null, Payment: 0
-2020-01-14 16:22:38 DEBUG Driver:16 - ................USERS.................
-2020-01-14 16:22:38 DEBUG Driver:17 - [admin, user, david]
-2020-01-14 16:22:38 DEBUG Driver:19 - admin true pass
-2020-01-14 16:22:38 DEBUG Driver:19 - user false pass
-2020-01-14 16:22:38 DEBUG Driver:19 - david false pass
-2020-01-14 16:22:38 DEBUG Driver:23 - .............LOT CARS..................
-2020-01-14 16:22:38 DEBUG Driver:25 - 2006 grey toyora matrix 2000
-2020-01-14 16:22:38 DEBUG Driver:27 - Owner: null, Payment: 0
-2020-01-14 16:22:38 DEBUG Driver:31 - ...................BOUGHT CARS.........................
-2020-01-14 16:22:38 DEBUG Driver:33 - 333 444 111 222 555
-2020-01-14 16:22:38 DEBUG Driver:35 - Owner: user, Payment: 590
-2020-01-14 16:22:38 DEBUG Driver:33 - 2011 yellow honda fit 18000
-2020-01-14 16:22:38 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-15 09:33:38 DEBUG Driver:16 - ................USERS.................
+2020-01-15 09:33:38 DEBUG Driver:17 - [admin, user, david]
+2020-01-15 09:33:38 DEBUG Driver:19 - admin true pass
+2020-01-15 09:33:38 DEBUG Driver:19 - user false pass
+2020-01-15 09:33:38 DEBUG Driver:19 - david false pass
+2020-01-15 09:33:38 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:33:38 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:33:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:33:38 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:33:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:33:38 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:33:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:33:38 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:33:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:33:38 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-15 09:33:38 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-15 09:33:38 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-15 09:33:38 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-15 09:33:38 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-15 09:33:38 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-15 09:33:38 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-15 09:33:38 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-15 09:33:38 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-15 09:34:34 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:34:34 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:34:34 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:34:34 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:34:34 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:34:34 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:34:34 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:34:34 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:34:34 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:34:34 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:34:34 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:16 - ................USERS.................
+2020-01-15 09:37:15 DEBUG Driver:17 - [admin, user, david, username]
+2020-01-15 09:37:15 DEBUG Driver:19 - admin true pass
+2020-01-15 09:37:15 DEBUG Driver:19 - user false pass
+2020-01-15 09:37:15 DEBUG Driver:19 - david false pass
+2020-01-15 09:37:15 DEBUG Driver:19 - username true password
+2020-01-15 09:37:15 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:37:15 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:37:15 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:37:15 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:37:15 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:37:15 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:37:15 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:15 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-15 09:37:15 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-15 09:37:15 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-15 09:37:15 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-15 09:37:15 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-15 09:37:15 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-15 09:37:15 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-15 09:37:15 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-15 09:37:15 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-15 09:37:38 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:37:38 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:37:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:38 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:37:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:38 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:37:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:38 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:37:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:37:38 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:37:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:16 - ................USERS.................
+2020-01-15 09:40:46 DEBUG Driver:17 - [admin, user, david, username]
+2020-01-15 09:40:46 DEBUG Driver:19 - admin true pass
+2020-01-15 09:40:46 DEBUG Driver:19 - user false pass
+2020-01-15 09:40:46 DEBUG Driver:19 - david false pass
+2020-01-15 09:40:46 DEBUG Driver:19 - username true password
+2020-01-15 09:40:46 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:40:46 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:40:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:40:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:40:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:40:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:40:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:40:46 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-15 09:40:46 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-15 09:40:46 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-15 09:40:46 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-15 09:40:46 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-15 09:40:46 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-15 09:40:46 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-15 09:40:46 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-15 09:40:46 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-15 09:41:42 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:41:42 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:41:42 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:41:42 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:41:42 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:41:42 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:41:42 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-15 09:41:42 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-15 09:42:08 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-15 09:42:08 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-15 09:42:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:16 - ................USERS.................
+2020-01-17 10:24:04 DEBUG Driver:17 - [admin, user, david, username, person]
+2020-01-17 10:24:04 DEBUG Driver:19 - admin true pass
+2020-01-17 10:24:04 DEBUG Driver:19 - user false pass
+2020-01-17 10:24:04 DEBUG Driver:19 - david false pass
+2020-01-17 10:24:04 DEBUG Driver:19 - username true password
+2020-01-17 10:24:04 DEBUG Driver:19 - person true pass
+2020-01-17 10:24:04 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 10:24:04 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 10:24:04 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 10:24:04 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 10:24:04 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 10:24:04 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 10:24:04 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 10:24:04 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-17 10:24:04 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 10:24:04 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 10:24:04 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 10:24:04 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 12:05:59 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:05:59 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:05:59 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:05:59 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:05:59 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:05:59 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:05:59 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:05:59 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:06:08 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:08 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:06:08 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:06:28 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:28 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:06:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:06:40 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:40 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:06:40 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:06:48 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:06:48 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:06:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:07:18 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:18 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:07:18 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:07:28 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:28 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:07:28 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:07:38 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:38 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:07:38 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:07:52 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:07:52 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:07:52 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:08:10 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:10 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:08:10 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:16 - ................USERS.................
+2020-01-17 12:08:22 DEBUG Driver:17 - [admin, user, david, username, person]
+2020-01-17 12:08:22 DEBUG Driver:19 - admin true pass
+2020-01-17 12:08:22 DEBUG Driver:19 - user false pass
+2020-01-17 12:08:22 DEBUG Driver:19 - david false pass
+2020-01-17 12:08:22 DEBUG Driver:19 - username true password
+2020-01-17 12:08:22 DEBUG Driver:19 - person true pass
+2020-01-17 12:08:22 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:08:22 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:08:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:22 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 12:08:22 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 12:08:22 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 12:08:22 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 12:08:22 DEBUG Driver:35 - Owner: david, Payment: 17000
+2020-01-17 12:08:22 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 12:08:22 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 12:08:22 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 12:08:22 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 12:08:48 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:08:48 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:48 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:48 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:48 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:48 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:48 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:08:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:08:57 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:08:57 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:08:57 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:09:06 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:06 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:09:06 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:09:21 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:21 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:09:21 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:09:29 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:29 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:09:29 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:43 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 12:09:43 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 12:09:43 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 12:09:43 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 12:09:43 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-17 12:09:43 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 12:09:43 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 12:09:43 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 12:09:43 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 12:09:54 DEBUG Driver:16 - ................USERS.................
+2020-01-17 12:09:54 DEBUG Driver:17 - [admin, user, david, username, person]
+2020-01-17 12:09:54 DEBUG Driver:19 - admin true pass
+2020-01-17 12:09:54 DEBUG Driver:19 - user false pass
+2020-01-17 12:09:54 DEBUG Driver:19 - david false pass
+2020-01-17 12:09:54 DEBUG Driver:19 - username true password
+2020-01-17 12:09:54 DEBUG Driver:19 - person true pass
+2020-01-17 12:09:54 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:09:54 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:09:54 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:09:54 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 12:09:54 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 12:09:54 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 12:09:54 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 12:09:54 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-17 12:09:54 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 12:09:54 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 12:09:54 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 12:09:54 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 12:26:13 DEBUG Driver:16 - ................USERS.................
+2020-01-17 12:26:13 DEBUG Driver:17 - [admin, user, david, username, person]
+2020-01-17 12:26:13 DEBUG Driver:19 - admin true pass
+2020-01-17 12:26:13 DEBUG Driver:19 - user false pass
+2020-01-17 12:26:13 DEBUG Driver:19 - david false pass
+2020-01-17 12:26:13 DEBUG Driver:19 - username true password
+2020-01-17 12:26:13 DEBUG Driver:19 - person true pass
+2020-01-17 12:26:13 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 12:26:13 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 12:26:13 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 12:26:13 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 12:26:13 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 12:26:13 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 12:26:13 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 12:26:13 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-17 12:26:13 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 12:26:13 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 12:26:13 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 12:26:13 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 13:34:17 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:34:17 DEBUG Driver:25 - 2011 black toyota matrix 12000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:17 DEBUG Driver:25 - 111 car car car 1000
+2020-01-17 13:34:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 13:34:37 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 13:34:37 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 13:34:37 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 13:34:37 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-17 13:34:37 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 13:34:37 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 13:34:37 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 13:34:37 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 13:34:37 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-17 13:34:37 DEBUG Driver:35 - Owner: user, Payment: 9999999
+2020-01-17 13:34:37 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:34:37 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:34:37 DEBUG Driver:25 - 111 car car car 1000
+2020-01-17 13:34:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:09 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-17 13:35:09 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-17 13:35:09 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-17 13:35:09 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-17 13:35:09 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-17 13:35:09 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-17 13:35:09 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-17 13:35:09 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-17 13:35:09 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-17 13:35:09 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-17 13:35:09 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-17 13:35:26 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:35:26 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:26 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:26 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:26 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:26 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:35:26 DEBUG Driver:25 - 111 car car car 1000
+2020-01-17 13:35:26 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:36:05 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:05 DEBUG Driver:25 - 111 car car car 1000
+2020-01-17 13:36:05 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:36:22 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:22 DEBUG Driver:25 - 111 car car car 1000
+2020-01-17 13:36:22 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:33 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-17 13:36:33 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-17 13:36:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:33 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-17 13:36:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:33 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-17 13:36:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:33 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-17 13:36:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-17 13:36:33 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-17 13:36:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:20:51 DEBUG Driver:16 - ................USERS.................
+2020-01-20 21:41:17 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:41:17 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:41:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:17 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:41:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:17 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:41:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:17 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:41:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:17 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:41:17 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:17 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:41:17 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:41:17 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:41:17 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:41:17 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:41:17 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:41:17 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:41:17 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:41:17 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:41:17 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:41:17 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:41:48 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:41:48 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:41:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:48 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:41:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:48 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:41:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:48 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:41:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:48 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:41:48 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:41:48 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:41:48 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:41:48 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:41:48 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:41:48 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:41:48 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:41:48 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:41:48 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:41:48 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:41:48 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:41:48 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:44:46 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:44:46 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:44:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:44:46 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:44:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:44:46 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:44:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:44:46 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:44:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:44:46 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:44:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:44:46 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:44:46 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:44:46 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:44:46 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:44:46 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:44:46 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:44:46 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:44:46 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:44:46 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:44:46 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:44:46 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:46:37 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:46:37 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:46:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:46:37 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:46:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:46:37 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:46:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:46:37 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:46:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:46:37 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:46:37 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:46:37 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:46:37 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:46:37 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:46:37 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:46:37 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:46:37 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:46:37 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:46:37 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:46:37 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:46:37 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:46:37 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:54:33 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:54:33 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:54:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:54:33 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:54:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:54:33 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:54:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:54:33 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:54:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:54:33 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:54:33 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:54:33 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:54:33 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:54:33 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:54:33 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:54:33 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:54:33 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:54:33 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:54:33 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:54:33 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:54:33 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:54:33 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:55:02 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:55:02 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:55:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:02 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:55:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:02 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:55:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:02 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:55:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:02 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:55:02 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:02 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:55:02 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:55:02 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:55:02 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:55:02 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:55:02 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:55:02 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:55:02 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:55:02 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:55:02 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:55:02 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:55:32 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:55:32 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:55:32 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:32 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:55:32 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:32 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:55:32 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:32 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:55:32 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:32 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:55:32 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:32 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:55:32 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:55:32 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:55:32 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:55:32 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:55:32 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:55:32 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:55:32 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:55:32 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:55:32 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:55:32 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:55:46 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:55:46 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:55:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:46 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:55:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:46 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:55:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:46 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:55:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:46 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:55:46 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:55:46 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:55:46 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:55:46 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:55:46 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:55:46 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:55:46 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:55:46 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:55:46 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:55:46 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:55:46 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:55:46 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-20 21:59:31 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-20 21:59:31 DEBUG Driver:25 - 2013 yellow honda fit 15000
+2020-01-20 21:59:31 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:59:31 DEBUG Driver:25 - 1999 red ford f150 7000
+2020-01-20 21:59:31 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:59:31 DEBUG Driver:25 - 1000 blue fake car 1000
+2020-01-20 21:59:31 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:59:31 DEBUG Driver:25 - 1000 red 1000 1000 10000
+2020-01-20 21:59:31 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:59:31 DEBUG Driver:25 - 999 yellow imaginary dream 1929
+2020-01-20 21:59:31 DEBUG Driver:27 - Owner: null, Payment: 0
+2020-01-20 21:59:31 DEBUG Driver:31 - ...................BOUGHT CARS.........................
+2020-01-20 21:59:31 DEBUG Driver:33 - 333 444 111 222 555
+2020-01-20 21:59:31 DEBUG Driver:35 - Owner: user, Payment: 590
+2020-01-20 21:59:31 DEBUG Driver:33 - 2011 yellow honda fit 18000
+2020-01-20 21:59:31 DEBUG Driver:35 - Owner: david, Payment: 16889
+2020-01-20 21:59:31 DEBUG Driver:33 - 2006 grey toyora matrix 2000
+2020-01-20 21:59:31 DEBUG Driver:35 - Owner: user, Payment: 10000
+2020-01-20 21:59:31 DEBUG Driver:33 - 2323 2323 222 33323 2323
+2020-01-20 21:59:31 DEBUG Driver:35 - Owner: user, Payment: 12
+2020-01-20 21:59:31 DEBUG Driver:33 - 2011 black toyota matrix 12000
+2020-01-20 21:59:31 DEBUG Driver:35 - Owner: user, Payment: 9888888
+2020-01-21 12:31:49 DEBUG Driver:23 - .............LOT CARS..................
+2020-01-21 12:31:49 DEBUG Driver:31 - ...................BOUGHT CARS.........................

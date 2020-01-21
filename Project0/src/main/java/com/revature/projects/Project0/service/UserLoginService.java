@@ -41,21 +41,16 @@ public class UserLoginService {
 
 	public static boolean createUser(String newUsername, String newPassword, boolean admin) {
 
-		ArrayList<User> users = (ArrayList<User>) uDAO.read();
-
-		try {
-			for (User each : users) {
-				if (each.getUsername().equals(newUsername)) {
-					return false;
-				}
-			}
-			users.add(new User(newUsername, newPassword, admin));
-		} catch (NullPointerException e) {
-			users = new ArrayList<User>();
-			users.add(new User(newUsername, newPassword, admin));
-		}
-		uDAO.write(users);
-		return true;
+		/*
+		 * ArrayList<User> users = (ArrayList<User>) uDAO.read();
+		 * 
+		 * try { for (User each : users) { if (each.getUsername().equals(newUsername)) {
+		 * return false; } } users.add(new User(newUsername, newPassword, admin)); }
+		 * catch (NullPointerException e) { users = new ArrayList<User>(); users.add(new
+		 * User(newUsername, newPassword, admin)); } uDAO.write(users); return true;
+		 */
+		
+		uDAO.insertUser(newUsername, newPassword, admin);
 	}
 	
 	public static User getUser(String username, String password) {

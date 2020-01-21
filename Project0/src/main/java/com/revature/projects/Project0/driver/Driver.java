@@ -1,6 +1,9 @@
 package com.revature.projects.Project0.driver;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -8,6 +11,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 import com.revature.projects.Project0.dao.BoughtDAO;
 import com.revature.projects.Project0.dao.CarDAO;
+import com.revature.projects.Project0.dao.OfferDAO;
 import com.revature.projects.Project0.dao.UserDAO;
 import com.revature.projects.Project0.pojo.Car;
 import com.revature.projects.Project0.pojo.User;
@@ -19,8 +23,8 @@ public class Driver {
 	private static Scanner scan = new Scanner(System.in);
 	public static CarDAO cDAO = new CarDAO();
 	public static UserDAO uDAO = new UserDAO();
-	public static BoughtDAO bDAO = new BoughtDAO();
-	public static User usingUser;
+	public static OfferDAO oDAO = new OfferDAO();
+	public static String usingUsername;
 	public static ArrayList<User> users;
 	public static ArrayList<Car> cars;
 	public static ArrayList<Car> bought;
@@ -32,14 +36,17 @@ public class Driver {
 		PropertyConfigurator.configure("./src/main/resources/log4j.properties");
 		String option = "";
 		int selection = -1;
-		users = (ArrayList<User>) uDAO.read();
-		cars = (ArrayList<Car>) cDAO.read();
-		bought = (ArrayList<Car>) bDAO.read();
+		try {
+			cars = cDAO.readAll();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		{
-			loggers.logUserArray(users);
-			loggers.logCarArray(cars);
-			loggers.logBoughtArray(bought);
+			//loggers.logUserArray(users);
+			//loggers.logCarArray(cars);
+			//loggers.logBoughtArray(bought);
 		}
 
 		if (users == null) {
@@ -92,17 +99,13 @@ public class Driver {
 		String username = scan.nextLine();
 		System.out.println("Enter Password: ");
 		String password = scan.nextLine();
-		boolean check = UserLoginService.checkUser(username, password);
+		boolean check = uDAO.checkUser(username, password);
 		if (check == false) {
 			System.out.println("\nInvalid Credentials");
 			return;
 		} else if (check == true) {
 			System.out.println("\nCredentials Accepted!");
-			for (User user : users) {
-				if (user.getUsername().equals(username)) {
-					usingUser = user;
-				}
-			}
+			usingUsername = username;
 			userMenu();
 			return;
 		}
@@ -139,7 +142,7 @@ public class Driver {
 		int i = 1;
 		ArrayList<Car> userBought = new ArrayList<Car>();
 		for (Car each : bought) {
-			if (each.getOwner().equals(usingUser.getUsername())) {
+			if (each.getOwner().equals(usingUsername)) {
 				userBought.add(each);
 			}
 		}
@@ -192,7 +195,7 @@ public class Driver {
 				}
 				car.setPayment(car.getPayment() - payoff);
 				bDAO.write(bought);
-				loggers.logBoughtArray(bought);
+				//loggers.logBoughtArray(bought);
 				System.out.println("Payment remaining: $" + car.getPayment());
 				return;
 			}
@@ -205,7 +208,7 @@ public class Driver {
 		String username = scan.nextLine();
 		System.out.println("Enter Password: ");
 		String password = scan.nextLine();
-		boolean check = UserLoginService.checkAdmin(username, password);
+		boolean check = uDAO.checkAdmin(username, password);
 		if (check == false) {
 			System.out.println("\nInvalid Credentials");
 			return;
@@ -288,23 +291,24 @@ public class Driver {
 			admin = true;
 		}
 
-		boolean res = UserLoginService.createUser(username, password, admin);
-		if (res == true) {
-			System.out.println("Success! New user '" + username + "' has been created!");
-		} else {
-			System.out.println("Failure! Invalid username!");
+		try {
+			uDAO.insertUser(username, password, admin);
+		} catch (SQLException e) {
+			System.out.println("Error: Invalid username or password");
+			return;
 		}
+		System.out.println("User created!");
+		//users.add(new User(username, password, admin));
 	}
 
 	public static void getOffersOnCar() {
-		ArrayList<String> userOffer = new ArrayList<String>();
+		Map<String, Integer> offers = null;
 		int selectedOffer = 0;
 		while (true) {
 			if (cars.isEmpty()) {
 				System.out.println("No cars in lot");
 				return;
 			}
-			Set<String> keys = null;
 			int carIndex;
 			int i = 1;
 			System.out.println("Enter the number of the desired car: ");
@@ -317,45 +321,47 @@ public class Driver {
 				return;
 			}
 			Car car = cars.get(carIndex - 1);
-			System.out.println("\n" + car);
-			System.out.println("Offers: ");
 			try {
-				keys = car.getOffers().keySet();
-				for (String key : keys) {
-					System.out.println("[" + i + "] " + key + " : " + car.getOffers().get(key));
-					userOffer.add(key);
-					i++;
-				}
-			} catch (Exception e) {
-				System.out.println("No offers");
+				offers = oDAO.getCarOffers(car.getCarID());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("\n" + car);
+			if (offers.isEmpty()) {
+				System.out.println("No offers on this car.");
 				return;
+			}
+			System.out.println("Offers: ");
+			
+			for (String key : offers.keySet()) {
+				System.out.println(key + " : " + offers.get(key));
 			}
 
 			while (true) {
-				System.out.println("Choose an offer: ");
-				selectedOffer = Integer.parseInt(scan.nextLine());
-				if (selectedOffer == 0) {
+				System.out.println("Choose a username: ");
+				String selectedUser = scan.nextLine();
+				if (selectedUser == "0") {
 					break;
 				} else {
 					System.out.println("What do you want to do with this offer?");
-					System.out.println("[1] Reject");
-					System.out.println("[2] Accept");
+					System.out.println("[1] Accept");
+					System.out.println("[2] Reject");
 					int sel = Integer.parseInt(scan.nextLine());
 					if (sel == 1) {
-						car.getOffers().remove(userOffer.get(selectedOffer - 1));
-						cDAO.write(cars);
-						loggers.logCarArray(cars);
-						System.out.println("Offer rejected.");
-					} else if (sel == 2) {
-						car.setOwner(userOffer.get(selectedOffer - 1),
-								car.getOffers().get(userOffer.get(selectedOffer - 1)));
-						bought.add(car);
-						bDAO.write(bought);
-						loggers.logBoughtArray(bought);
-						cars.remove(carIndex - 1);
-						cDAO.write(cars);
-						loggers.logCarArray(cars);
+						
+						//loggers.logCarArray(cars);
 						System.out.println("Car sold.");
+					} else if (sel == 2) {
+						try {
+							oDAO.rejectOffer(car.getCarID(), selectedUser);
+						} catch (SQLException e) {
+							System.out.println("Error: Invalid Username");
+							return;
+						}
+						//loggers.logBoughtArray(bought);
+						//loggers.logCarArray(cars);
+						System.out.println("Offer rejected.");
 						return;
 					}
 				}
@@ -410,9 +416,13 @@ public class Driver {
 			System.out.println("Add this car? (y/n)");
 			String option = scan.nextLine();
 			if (option.toUpperCase().charAt(0) == 'Y') {
-				cars.add(new Car(make, model, year, colour, price));
-				cDAO.write(cars);
-				loggers.logCarArray(cars);
+				cDAO.insertCar(make, model, year, colour, price);
+				try {
+					cars = cDAO.readAll();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				return;
 			}
 		}
@@ -437,9 +447,10 @@ public class Driver {
 			}
 
 			try {
-				cars.remove(select - 1);
-				cDAO.write(cars);
-				loggers.logCarArray(cars);
+				Car car = cars.get(select - 1);
+				cDAO.removeCar(car);
+				cars = cDAO.readAll();
+				//loggers.logCarArray(cars);
 			} catch (Exception e) {
 				System.out.println("Invalid selection.");
 				continue;
@@ -458,8 +469,10 @@ public class Driver {
 			return;
 		}
 		for (Car car : cars) {
-			System.out.println("[" + i + "] " + car);
-			i++;
+			if (car.getOwner() == null) {
+				System.out.println("[" + cars.indexOf(car) + 1 + "] " + car);
+				i++;
+			}
 		}
 	}
 
@@ -500,9 +513,9 @@ public class Driver {
 				System.out.println("Is this acceptable?");
 				option = scan.nextLine();
 				if (option.toUpperCase().charAt(0) == 'Y') {
-					car.addOffer(usingUser.getUsername(), offer);
-					cDAO.write(cars);
-					loggers.logCarArray(cars);
+					//TODO FIX USER ACCOUNTS CREATED IN SAME SESSION MAKING OFFERS
+					oDAO.insertOffer(car.getCarID(), usingUsername, offer);
+					//loggers.logCarArray(cars);
 					System.out.println("Your offer has been logged.");
 				}
 			}

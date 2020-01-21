@@ -6,7 +6,8 @@ import java.util.Map;
 
 @SuppressWarnings("serial")
 public class Car implements Serializable {
-
+	
+	private int carID;
 	private String make;
 	private String model;
 	private int year;
@@ -15,19 +16,26 @@ public class Car implements Serializable {
 	private Map<String, Integer> offers;
 	private String owner;
 	private int payLeft;
+	private int boughtPrice;
 	
 	public Car() {} //No args constructor
 	
-	public Car(String make, String model, int year, String colour, int price) {
+	public Car(int carID, String make, String model, int year, String colour, int price, String owner, int boughtPrice) {
+		this.carID = carID;
 		this.make = make;
 		this.model = model;
 		this.year = year;
 		this.colour = colour;
 		this.offers = new HashMap<String, Integer>();
 		this.price = price;
-		this.owner = null;
+		this.owner = owner;
+		this.boughtPrice = boughtPrice;
 	}
 	
+	
+	public int getCarID() {
+		return this.carID;
+	}
 	public String getMake() {
 		return this.make;
 	}
